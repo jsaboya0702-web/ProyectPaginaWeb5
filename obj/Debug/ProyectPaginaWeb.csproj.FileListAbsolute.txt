@@ -1,0 +1,4 @@
+C:\Users\jose_\source\repos\ProyectPaginaWeb\ProyectPaginaWeb\obj\Debug\ProyectPaginaWeb.csproj.AssemblyReference.cache
+C:\Users\jose_\source\repos\ProyectPaginaWeb\ProyectPaginaWeb\obj\Debug\ProyectPaginaWeb.csproj.CoreCompileInputs.cache
+C:\Users\jose_\Downloads\ProyectPaginaWeb (1)\ProyectPaginaWeb\ProyectPaginaWeb\ProyectPaginaWeb\obj\Debug\ProyectPaginaWeb.csproj.AssemblyReference.cache
+C:\Users\jose_\Downloads\ProyectPaginaWeb (1)\ProyectPaginaWeb\ProyectPaginaWeb\ProyectPaginaWeb\obj\Debug\ProyectPaginaWeb.csproj.CoreCompileInputs.cache

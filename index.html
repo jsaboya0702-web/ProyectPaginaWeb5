@@ -1,0 +1,910 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>LookStore - Página web de ropa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name ="author" content="Alarcon Orrego Jose Carlos U23214600">    
+    <meta name ="author" content="Chinchay Torres Yudeli U22212787">
+    <meta name ="author" content="Saboya Shupingahua Jhon Anthony U24308635">
+    <meta name ="author" content="Seminario Gamarra Maria Alejandra Kaherine U22330774">
+    <meta name="keywords" content="HTML, CSS, JavaScript, LookStore, disfraces">
+    <meta name="description" content="Tienda virtual de ropa y disfraces - LookStore">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+      <header class="encabezado">
+          <nav class="navbar">
+              <!--Logo-->
+              <div class="logo">LookStore</div>
+
+              <!--Menú principal-->
+              <ul class="nav-links">
+                  <li><a href="#">INICIO</a></li>
+
+                  <!-- Categorías desplegables -->
+                  <li class="dropdown">
+                      <button class="dropdown-btn" onclick="toggleCategorias()">CATEGORIA</button>
+                      <div class="dropdown-panel" id="panelCategorias">
+                          <div class="categoría-section">
+                              <h4>🎃 Disfraces Halloween</h4>
+                          </div>
+                      </div>
+                  </li>
+
+                  <li><a href="#">PERFIL</a></li>
+              </ul>
+
+              <!-- Menú -->
+              <div class="menu-container">
+                  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+                  <div class="menu-dropdown" id="menuDropdown">
+                      <a href="#">Tus pedidos</a>
+                      <a href="#">Tus reseñas</a>
+                      <a href="#">Tu perfil</a>
+                      <a href="#">Cupones y ofertas</a>
+                      <a href="#">Saldo de crédito</a>
+                      <a href="#">Favoritos</a>
+                      <a href="#">Tiendas que sigues</a>
+                      <a href="#">Historial de navegación</a>
+                      <a href="#">Direcciones</a>
+                      <a href="#">Seguridad de la cuenta</a>
+                  </div>
+              </div>
+          </nav>
+      </header>
+
+      <main>
+          <section class="productos-destacados">
+              <h1>
+                  <div class="fantasmas">
+                      <img src="imagenes/fantasma.jpg" alt="fantasma" class="fantasma">
+                      <img src="imagenes/fantasma.jpg" alt="fantasma" class="fantasma">
+                      <img src="imagenes/fantasma.jpg" alt="fantasma" class="fantasma">
+                      <img src="imagenes/fantasma.jpg" alt="fantasma" class="fantasma">
+                      <img src="imagenes/fantasma.jpg" alt="fantasma" class="fantasma">
+                      <img src="imagenes/fantasma.jpg" alt="fantasma" class="fantasma">
+                      <img src="imagenes/fantasma.jpg" alt="fantasma" class="fantasma">
+                      <img src="imagenes/fantasma.jpg" alt="fantasma" class="fantasma">
+                      <img src="imagenes/fantasma.jpg" alt="fantasma" class="fantasma">
+                  </div>
+              </h1>
+              <!-- ICONO DE FILTRO -->
+              <div class="filtros">
+                  <button id="filtroMujer" class="filtro-btn" title="Filtrar mujer">
+                      <i class="fas fa-venus"></i>
+                  </button>
+                  <button id="filtroHombre" class="filtro-btn" title="Filtrar hombre">
+                      <i class="fas fa-mars"></i>
+                  </button>
+                  <button id="filtroTodo" class="filtro-btn" title="Mostrar todos">
+                      <i class="fas fa-ghost"></i>
+                  </button>
+              </div>
+
+
+              <div class="productos-grid" id="productosMujer">
+                  <!-- Producto 1 -->
+                  <article class="producto" data-genero="mujer">
+                      <img src="imagenes/img1.png" alt="Alas de polvo dorado">
+                      <h3 class="product-title">Alas de polvo dorado</h3>
+
+                      <div class="productos-info">
+                          <p class="old-price"><span class="currency">S/</span> 49.90</p>
+
+                          <div class="current-price-cart">
+                              <p class="current-price"><span class="currency">S/</span> 18.42</p>
+                              <button class="cart-button">
+                                  <i class="fas fa-shopping-cart"></i>
+                              </button>
+                          </div>
+                      </div>
+
+                      <div class="rating">
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star half">★</span>
+                          <span class="review-count">22</span>
+                      </div>
+                  </article>
+
+                  <!-- Producto 2 -->
+                  <article class="producto" data-genero="mujer">
+                      <img src="imagenes/img2.jpeg" alt="Cuello gótico mujer plumas negra">
+                      <h3 class="product-title">Cuello gótico mujer plumas negra</h3>
+
+                      <div class="productos-info">
+                          <p class="old-price"><span class="currency">S/</span> 59.90</p>
+
+                          <div class="current-price-cart">
+                              <p class="current-price"><span class="currency">S/</span> 29.95</p>
+                              <button class="cart-button">
+                                  <i class="fas fa-shopping-cart"></i>
+                              </button>
+                          </div>
+                      </div>
+
+                      <div class="rating">
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="review-count">50</span>
+                      </div>
+                  </article>
+
+                  <!-- Producto 3 -->
+                  <article class="producto" data-genero="mujer">
+                      <img src="imagenes/img3.jpg" alt="Cleopatra mujer disfraz">
+                      <h3 class="product-title">Cleopatra mujer disfraz</h3>
+
+                      <div class="productos-info">
+                          <p class="old-price"><span class="currency">S/</span> 113.13</p>
+
+                          <div class="current-price-cart">
+                              <p class="current-price"><span class="currency">S/</span> 100.57</p>
+                              <button class="cart-button">
+                                  <i class="fas fa-shopping-cart"></i>
+                              </button>
+                          </div>
+                      </div>
+
+                      <div class="rating">
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star half">★</span>
+                          <span class="review-count">150</span>
+                      </div>
+                  </article>
+
+                  <!-- Producto 4 -->
+                  <article class="producto" data-genero="mujer">
+                      <img src="imagenes/img4.jpg" alt="Disfraz de vampiro mujer">
+                      <h3 class="product-title">Disfraz de vampiro mujer</h3>
+
+                      <div class="productos-info">
+                          <p class="old-price"><span class="currency">S/</span> 108.85</p>
+
+                          <div class="current-price-cart">
+                              <p class="current-price"><span class="currency">S/</span> 99.90</p>
+                              <button class="cart-button">
+                                  <i class="fas fa-shopping-cart"></i>
+                              </button>
+                          </div>
+                      </div>
+
+                      <div class="rating">
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star half">★</span>
+                          <span class="review-count">300</span>
+                      </div>
+                  </article>
+
+                  <!-- Producto 5 -->
+                  <article class="producto" data-genero="mujer">
+                      <img src="imagenes/img5.avif" alt="Disfraz de Merlina Addams">
+                      <h3 class="product-title">Disfraz de Merlina Addams</h3>
+
+                      <div class="productos-info">
+                          <p class="old-price"><span class="currency">S/</span> 125.95</p>
+
+                          <div class="current-price-cart">
+                              <p class="current-price"><span class="currency">S/</span> 105.90</p>
+                              <button class="cart-button">
+                                  <i class="fas fa-shopping-cart"></i>
+                              </button>
+                          </div>
+                      </div>
+
+                      <div class="rating">
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star half">★</span>
+                          <span class="review-count">350</span>
+                      </div>
+                  </article>
+
+                  <!-- Producto 6 -->
+                  <article class="producto" data-genero="mujer">
+                      <img src="imagenes/img6.jpg" alt="Disfraz de Maléfica mujer">
+                      <h3 class="product-title">Disfraz de Maléfica mujer</h3>
+
+                      <div class="productos-info">
+                          <p class="old-price"><span class="currency">S/</span> 46.95</p>
+
+                          <div class="current-price-cart">
+                              <p class="current-price"><span class="currency">S/</span> 26.75</p>
+                              <button class="cart-button">
+                                  <i class="fas fa-shopping-cart"></i>
+                              </button>
+                          </div>
+                      </div>
+
+                      <div class="rating">
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star half">★</span>
+                          <span class="review-count">80</span>
+                      </div>
+                  </article>
+
+                  <!-- Producto 7 -->
+                  <article class="producto" data-genero="mujer">
+                      <img src="imagenes/img7.jpg" alt="Disfraz de Merida mujer">
+                      <h3 class="product-title">Disfraz de Merida mujer</h3>
+
+                      <div class="productos-info">
+                          <p class="old-price"><span class="currency">S/</span> 150.00</p>
+
+                          <div class="current-price-cart">
+                              <p class="current-price"><span class="currency">S/</span> 128.95</p>
+                              <button class="cart-button">
+                                  <i class="fas fa-shopping-cart"></i>
+                              </button>
+                          </div>
+                      </div>
+
+                      <div class="rating">
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star half">★</span>
+                          <span class="review-count">450</span>
+                      </div>
+                  </article>
+
+                  <!-- Producto 8 -->
+                  <article class="producto" data-genero="mujer">
+                      <img src="imagenes/img8.jpg" alt="Disfraz de Caperucita mujer">
+                      <h3 class="product-title">Disfraz de Caperucita mujer</h3>
+
+                      <div class="productos-info">
+                          <p class="old-price"><span class="currency">S/</span> 50.00</p>
+
+                          <div class="current-price-cart">
+                              <p class="current-price"><span class="currency">S/</span> 35.63</p>
+                              <button class="cart-button">
+                                  <i class="fas fa-shopping-cart"></i>
+                              </button>
+                          </div>
+                      </div>
+
+                      <div class="rating">
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star half">★</span>
+                          <span class="review-count">1850</span>
+                      </div>
+                  </article>
+
+                  <!-- Producto 9 -->
+                  <article class="producto" data-genero="mujer">
+                      <img src="imagenes/img9.jpg" alt="Disfraz de ariel mujer">
+                      <h3 class="product-title">Disfraz de ariel mujer</h3>
+
+                      <div class="productos-info">
+                          <p class="old-price"><span class="currency">S/</span> 198.00</p>
+
+                          <div class="current-price-cart">
+                              <p class="current-price"><span class="currency">S/</span> 175.85</p>
+                              <button class="cart-button">
+                                  <i class="fas fa-shopping-cart"></i>
+                              </button>
+                          </div>
+                      </div>
+
+                      <div class="rating">
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star half">★</span>
+                          <span class="review-count">1250</span>
+                      </div>
+                  </article>
+
+                  <!-- Producto 10 -->
+                  <article class="producto" data-genero="mujer">
+                      <img src="imagenes/img10.png" alt="Disfraz de diablito mujer">
+                      <h3 class="product-title">Disfraz de diablito mujer</h3>
+
+                      <div class="productos-info">
+                          <p class="old-price"><span class="currency">S/</span> 128.00</p>
+
+                          <div class="current-price-cart">
+                              <p class="current-price"><span class="currency">S/</span> 105.56</p>
+                              <button class="cart-button">
+                                  <i class="fas fa-shopping-cart"></i>
+                              </button>
+                          </div>
+                      </div>
+
+                      <div class="rating">
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star half">★</span>
+                          <span class="review-count">150</span>
+                      </div>
+                  </article>
+              </div>
+
+              <!-- Productos ocultos -->
+              <div class="productos-grid" id="productosHombre">
+                  <!-- Producto 11 -->
+                  <article class="producto" data-genero="Hombre">
+                      <img src="imagenes/img11.jpg" alt="Disfraz del Joker hombre">
+                      <h3 class="product-title">Disfraz del Joker hombre</h3>
+
+                      <div class="productos-info">
+                          <p class="old-price"><span class="currency">S/</span> 124.83</p>
+
+                          <div class="current-price-cart">
+                              <p class="current-price"><span class="currency">S/</span> 105.85</p>
+                              <button class="cart-button">
+                                  <i class="fas fa-shopping-cart"></i>
+                              </button>
+                          </div>
+                      </div>
+
+                      <div class="rating">
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star half">★</span>
+                          <span class="review-count">170</span>
+                      </div>
+                  </article>
+
+                  <!-- Producto 12 -->
+                  <article class="producto" data-genero="Hombre">
+                      <img src="imagenes/img12.png" alt="Disfraz de piloto hombre">
+                      <h3 class="product-title">Disfraz de piloto hombre</h3>
+
+                      <div class="productos-info">
+                          <p class="old-price"><span class="currency">S/</span> 136.47</p>
+
+                          <div class="current-price-cart">
+                              <p class="current-price"><span class="currency">S/</span> 117.49</p>
+                              <button class="cart-button">
+                                  <i class="fas fa-shopping-cart"></i>
+                              </button>
+                          </div>
+                      </div>
+
+                      <div class="rating">
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star half">★</span>
+                          <span class="review-count">1970</span>
+                      </div>
+                  </article>
+
+                  <!-- Producto 13 -->
+                  <article class="producto" data-genero="Hombre">
+                      <img src="imagenes/img13.jpg" alt="Disfraz de faraón hombre">
+                      <h3 class="product-title">Disfraz de faraón hombre</h3>
+
+                      <div class="productos-info">
+                          <p class="old-price"><span class="currency">S/</span> 121.93</p>
+
+                          <div class="current-price-cart">
+                              <p class="current-price"><span class="currency">S/</span> 102.95</p>
+                              <button class="cart-button">
+                                  <i class="fas fa-shopping-cart"></i>
+                              </button>
+                          </div>
+                      </div>
+
+                      <div class="rating">
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star half">★</span>
+                          <span class="review-count">6970</span>
+                      </div>
+                  </article>
+
+                  <!-- Producto 14 -->
+                  <article class="producto" data-genero="Hombre">
+                      <img src="imagenes/img14.jpg" alt="Disfraz de Thor hombre">
+                      <h3 class="product-title">Disfraz de Thor hombre</h3>
+
+                      <div class="productos-info">
+                          <p class="old-price"><span class="currency">S/</span> 90.24</p>
+
+                          <div class="current-price-cart">
+                              <p class="current-price"><span class="currency">S/</span> 71.26</p>
+                              <button class="cart-button">
+                                  <i class="fas fa-shopping-cart"></i>
+                              </button>
+                          </div>
+                      </div>
+
+                      <div class="rating">
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star half">★</span>
+                          <span class="review-count">4653</span>
+                      </div>
+                  </article>
+
+                  <!-- Producto 15 -->
+                  <article class="producto" data-genero="Hombre">
+                      <img src="imagenes/img15.webp" alt="Armadura de un oficial de la Guardia del Palacio Imperial, China, siglo XVIII hombre">
+                      <h3 class="product-title">Armadura de un oficial de la Guardia del Palacio Imperial, China, siglo XVIII hombre</h3>
+
+                      <div class="productos-info">
+                          <p class="old-price"><span class="currency">S/</span> 277.49</p>
+
+                          <div class="current-price-cart">
+                              <p class="current-price"><span class="currency">S/</span> 258.51</p>
+                              <button class="cart-button">
+                                  <i class="fas fa-shopping-cart"></i>
+                              </button>
+                          </div>
+                      </div>
+
+                      <div class="rating">
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star half">★</span>
+                          <span class="review-count">515</span>
+                      </div>
+                  </article>
+
+                  <!-- Producto 16 -->
+                  <article class="producto" data-genero="Hombre">
+                      <img src="imagenes/img16.avif" alt="Disfraz de sacerdote hombre">
+                      <h3 class="product-title">Disfraz de sacerdote hombre</h3>
+
+                      <div class="productos-info">
+                          <p class="old-price"><span class="currency">S/</span> 73.49</p>
+
+                          <div class="current-price-cart">
+                              <p class="current-price"><span class="currency">S/</span> 54.55</p>
+                              <button class="cart-button">
+                                  <i class="fas fa-shopping-cart"></i>
+                              </button>
+                          </div>
+                      </div>
+
+                      <div class="rating">
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star half">★</span>
+                          <span class="review-count">352</span>
+                      </div>
+                  </article>
+
+                  <!-- Producto 17 -->
+                  <article class="producto" data-genero="Hombre">
+                      <img src="imagenes/img17.jpg" alt="Disfraz renancentista hombre">
+                      <h3 class="product-title">Disfraz renancentista hombre</h3>
+
+                      <div class="productos-info">
+                          <p class="old-price"><span class="currency">S/</span> 185.43</p>
+
+                          <div class="current-price-cart">
+                              <p class="current-price"><span class="currency">S/</span> 147.85</p>
+                              <button class="cart-button">
+                                  <i class="fas fa-shopping-cart"></i>
+                              </button>
+                          </div>
+                      </div>
+
+                      <div class="rating">
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star half">★</span>
+                          <span class="review-count">552</span>
+                      </div>
+                  </article>
+
+                  <!-- Producto 18 -->
+                  <article class="producto" data-genero="Hombre">
+                      <img src="imagenes/img18.png" alt="Disfraz de doctor strange hombre">
+                      <h3 class="product-title">Disfraz de doctor strange hombre</h3>
+
+                      <div class="productos-info">
+                          <p class="old-price"><span class="currency">S/</span> 139.19</p>
+
+                          <div class="current-price-cart">
+                              <p class="current-price"><span class="currency">S/</span> 120.12</p>
+                              <button class="cart-button">
+                                  <i class="fas fa-shopping-cart"></i>
+                              </button>
+                          </div>
+                      </div>
+
+                      <div class="rating">
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star half">★</span>
+                          <span class="review-count">511</span>
+                      </div>
+                  </article>
+
+
+                  <!-- Producto 19 -->
+                  <article class="producto" data-genero="Hombre">
+                      <img src="imagenes/img19.webp" alt="Disfraz de pirata hombre">
+                      <h3 class="product-title">Disfraz de pirata hombre</h3>
+
+                      <div class="productos-info">
+                          <p class="old-price"><span class="currency">S/</span> 75.11</p>
+
+                          <div class="current-price-cart">
+                              <p class="current-price"><span class="currency">S/</span> 44.87</p>
+                              <button class="cart-button">
+                                  <i class="fas fa-shopping-cart"></i>
+                              </button>
+                          </div>
+                      </div>
+
+                      <div class="rating">
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star half">★</span>
+                          <span class="review-count">41151</span>
+                      </div>
+                  </article>
+
+                  <!-- Producto 20 -->
+                  <article class="producto" data-genero="Hombre">
+                      <img src="imagenes/img20.jpg" alt="Disfraz de superman hombre">
+                      <h3 class="product-title">Disfraz de superman hombre</h3>
+
+                      <div class="productos-info">
+                          <p class="old-price"><span class="currency">S/</span> 112.22</p>
+
+                          <div class="current-price-cart">
+                              <p class="current-price"><span class="currency">S/</span> 82.02</p>
+                              <button class="cart-button">
+                                  <i class="fas fa-shopping-cart"></i>
+                              </button>
+                          </div>
+                      </div>
+
+                      <div class="rating">
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star filled">★</span>
+                          <span class="star half">★</span>
+                          <span class="review-count">3515</span>
+                      </div>
+                  </article>
+              </div>
+
+              <div class="ver-mas-container">
+                  <button id="verMasBtn" class="boton-flecha" type="button">
+                      <span class="flecha"></span>
+                  </button>
+              </div>
+
+          </section>
+
+
+
+      </main>
+      <!-- Sección de videos de disfraces -->
+      <section class="videos-disfraces">
+          <h2>🎭 Disfraces en Acción</h2>
+          <div class="video-grid">
+              <div class="video-item">
+                  <video controls poster="imagenes/poster1.jpg">
+                      <source src="video/vid1_merlina.mp4" type="video/mp4">
+                      Tu navegador no soporta videos HTML5.
+                  </video>
+                  <p>Disfraz de Merlina</p>
+              </div>
+
+              <div class="video-item">
+                  <video controls poster="imagenes/poster2.jpg">
+                      <source src="video/vid2_merida.mp4" type="video/mp4">
+                      Tu navegador no soporta videos HTML5.
+                  </video>
+                  <p>Disfraz de Merida</p>
+              </div>
+
+              <div class="video-item">
+                  <video controls poster="imagenes/poster3.jpg">
+                      <source src="video/vid3_dr.Strange.mp4" type="video/mp4">
+                      Tu navegador no soporta videos HTML5.
+                  </video>
+                  <p>Disfraz de Dr. Strange</p>
+              </div>
+
+              <div class="video-item">
+                  <video controls poster="imagenes/poster4.jpg">
+                      <source src="video/vid4_superman.mp4" type="video/mp4">
+                      Tu navegador no soporta videos HTML5.
+                  </video>
+                  <p>Disfraz de Superman</p>
+              </div>
+          </div>
+      </section>
+
+      <!-- Ventana modal genérica -->
+      <div id="modalInfo" class="modal">
+          <div class="modal-contenido">
+              <span class="cerrar" onclick="cerrarModal()">&times;</span>
+              <h22 id="modalTitulo"></h22>
+              <p id="modalTexto"></p>
+          </div>
+      </div>
+
+
+
+      <footer>
+          <footer class="footer">
+              <div class="footer-contenido">
+                  <div class="footer-seccion">
+                      <ul>
+                          <li><a href="empresa.html">Información de la empresa</a></li>
+                          <li><a href="#">Acerca de LookStore</a></li>
+                          <li><a href="#">Trabaja con nosotros</a></li>
+                          <li><a href="#">Contáctanos</a></li>
+                          <li><a href="#">Afíliate a nuestro programa</a></li>
+                      </ul>
+                  </div>
+
+                  <div class="footer-seccion">
+                      <ul>
+                          <li><a href="cliente.html">Atención al cliente</a></li>
+                          <li><a href="#">Política de devoluciones</a></li>
+                          <li><a href="#">Política de privacidad</a></li>
+                          <li><a href="#">Términos y condiciones</a></li>
+                          <li><a href="#">Centro de soporte</a></li>
+                      </ul>
+                  </div>
+
+                  <div class="footer-seccion">
+
+                      <ul>
+                          <li><a href="ayuda.html">Ayuda</a></li>
+                          <li><a href="#">Centro de ayuda</a></li>
+                          <li><a href="#">Métodos de pago</a></li>
+                          <li><a href="#">Envíos y entregas</a></li>
+                          <li><a href="#">Preguntas frecuentes</a></li>
+                      </ul>
+                  </div>
+
+                  <div class="footer-seccion">
+                      <h23>Síguenos</h23>
+                      <div class="redes">
+                          <a href="#"><i class="fab fa-facebook"></i></a>
+                          <a href="#"><i class="fab fa-instagram"></i></a>
+                          <a href="#"><i class="fab fa-tiktok"></i></a>
+                          <a href="#"><i class="fab fa-youtube"></i></a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="footer-bottom">
+                  <div class="pagos">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/MasterCard_Logo.svg" alt="MasterCard">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/PayPal_logo.svg" alt="PayPal">
+                  </div>
+                  <p>© 2025 LookStore - Todos los derechos reservados</p>
+              </div>
+          </footer>
+
+      </footer>
+
+
+
+      <script>
+          function toggleMenu() {
+              document.getElementById("menuDropdown").classList.toggle("show");
+          }
+
+          // Categorias desplegable
+          document.addEventListener("DOMContentLoaded", () => {
+              const categoriaBtn = document.querySelector(".dropdown-btn");
+              const categoriaPanel = document.querySelector(".dropdown-panel");
+
+              categoriaBtn.addEventListener("click", (e) => {
+                  e.preventDefault();
+                  categoriaPanel.classList.toggle("show");
+              });
+
+              // Cerrar ambos si haces clic fuera
+              window.addEventListener("click", (e) => {
+                  if (!e.target.closest(".dropdown")) {
+                      categoriaPanel.classList.remove("show");
+                  }
+                  if (!e.target.closest(".menu-container")) {
+                      document.getElementById("menuDropdown").classList.remove("show");
+                  }
+              });
+          });
+      </script>
+
+      <script src="script.js"></script>
+
+      <audio id="musicaFondo" src="musica/instrumental.mp3" autoplay loop></audio>
+
+      <script>
+          document.addEventListener("DOMContentLoaded", () => {
+              const musica = document.getElementById("musicaFondo");
+              if (musica) {
+                  musica.volume = 0.3;
+                  musica.play().catch(err => console.log("Error al reproducir:", err));
+              }
+          });
+      </script>
+
+      <script>
+          // Diccionario con toda la información del pie de página
+          const infoPaginas = {
+              // ---- Información de la empresa ----
+              "Acerca de LookStore": {
+                  titulo: "Acerca de LookStore",
+                  texto: "LookStore es una tienda de moda especializada en ropa por temporada. En cada época del año te ofrecemos prendas exclusivas que reflejan el espíritu de la temporada: desde divertidos disfraces y atuendos temáticos para Halloween 🎃, hasta ropa veraniega, navideña o deportiva. Nuestro compromiso es ofrecerte productos de calidad, cómodos y con estilo, para que luzcas increíble en cada ocasión."
+              },
+              "Trabaja con nosotros": {
+                  titulo: "Trabaja con nosotros",
+                  texto: "¿Te apasiona la moda y las tendencias? En LookStore buscamos personas creativas, entusiastas y comprometidas con brindar una excelente experiencia al cliente. Únete a nuestro equipo y sé parte de una marca en crecimiento enfocada en la innovación y el diseño de ropa por temporada. Envíanos tu CV a rrhh@lookstore.com con el asunto 'Trabajo en LookStore'."
+              },
+              "Contáctanos": {
+                  titulo: "Contáctanos",
+                  texto: "¿Tienes dudas, consultas o comentarios? ¡Estamos para ayudarte! Escríbenos a contacto@lookstore.com o llámanos al +51 999 999 999. Nuestro horario de atención es de lunes a viernes de 9:00 a.m. a 6:00 p.m. También puedes encontrarnos en redes sociales como LookStoreOficial."
+              },
+              "Afíliate a nuestro programa": {
+                  titulo: "Afíliate a nuestro programa",
+                  texto: "Únete al programa de afiliados de LookStore y gana comisiones promocionando nuestra ropa por temporada. Comparte nuestros productos en tus redes sociales, obtén descuentos exclusivos y sé parte de una comunidad que ama la moda estacional. ¡Comienza a generar ingresos con estilo!"
+              },
+
+              // ---- Atención al cliente ----
+              "Política de devoluciones": {
+                  titulo: "Política de devoluciones",
+                  texto: "En LookStore puedes realizar devoluciones dentro de los 15 días posteriores a la recepción de tu pedido. El producto debe estar en perfecto estado, sin uso y con etiquetas originales. No se aceptan devoluciones de artículos personalizados o de liquidación. Para solicitar una devolución, escríbenos a devoluciones@lookstore.com."
+              },
+              "Política de privacidad": {
+                  titulo: "Política de privacidad",
+                  texto: "Tu seguridad y privacidad son nuestra prioridad. LookStore protege tus datos personales conforme a la normativa vigente. No compartimos tu información con terceros sin tu consentimiento. Puedes consultar el detalle completo en nuestra sección de Política de Privacidad."
+              },
+              "Términos y condiciones": {
+                  titulo: "Términos y condiciones",
+                  texto: "Al realizar una compra en LookStore, aceptas nuestros términos y condiciones de uso. Nos reservamos el derecho de modificar precios, disponibilidad de productos y políticas sin previo aviso. Te recomendamos revisar esta sección regularmente para mantenerte informado."
+              },
+              "Centro de soporte": {
+                  titulo: "Centro de soporte",
+                  texto: "Nuestro equipo de soporte está disponible para asistirte en cualquier duda relacionada con tus pedidos, métodos de pago o envíos. Puedes comunicarte con nosotros por correo electrónico o mediante el chat de atención directa disponible en la web."
+              },
+
+              // ---- Ayuda ----
+              "Centro de ayuda": {
+                  titulo: "Centro de ayuda",
+                  texto: "En el Centro de Ayuda de LookStore encontrarás respuestas a las preguntas más comunes sobre tus pedidos, pagos, devoluciones y promociones. Si no encuentras la información que buscas, contáctanos y te ayudaremos personalmente."
+              },
+              "Métodos de pago": {
+                  titulo: "Métodos de pago",
+                  texto: "En LookStore aceptamos pagos con tarjetas Visa, MasterCard y PayPal. Todas las transacciones se realizan de manera segura mediante plataformas cifradas, garantizando la protección de tus datos personales y bancarios."
+              },
+              "Envíos y entregas": {
+                  titulo: "Envíos y entregas",
+                  texto: "Realizamos envíos a nivel nacional con nuestros socios logísticos. Los pedidos se entregan en un plazo de 2 a 5 días hábiles según tu ubicación. Durante temporadas especiales, como Halloween o Navidad, te recomendamos realizar tus compras con anticipación."
+              },
+              "Preguntas frecuentes": {
+                  titulo: "Preguntas frecuentes",
+                  texto: "Aquí podrás resolver tus dudas sobre cómo comprar, qué métodos de pago usamos, cómo funcionan los envíos y cómo solicitar cambios o devoluciones. Nuestro objetivo es que tu experiencia en LookStore sea rápida, fácil y segura."
+              }
+          };
+
+          // Mostrar ventana modal
+          function mostrarInfo(titulo) {
+              const modal = document.getElementById("modalInfo");
+              const modalTitulo = document.getElementById("modalTitulo");
+              const modalTexto = document.getElementById("modalTexto");
+
+              modalTitulo.textContent = infoPaginas[titulo].titulo;
+              modalTexto.textContent = infoPaginas[titulo].texto;
+              modal.style.display = "block";
+          }
+
+          // Cerrar modal
+          function cerrarModal() {
+              document.getElementById("modalInfo").style.display = "none";
+          }
+
+          // Detectar clics en todos los enlaces del footer
+          document.querySelectorAll('.footer-seccion ul li a').forEach(enlace => {
+              const texto = enlace.textContent.trim();
+              if (infoPaginas[texto]) {
+                  enlace.addEventListener('click', e => {
+                      e.preventDefault();
+                      mostrarInfo(texto);
+                  });
+              }
+          });
+
+          // Cerrar modal al hacer clic fuera
+          window.onclick = function (event) {
+              const modal = document.getElementById("modalInfo");
+              if (event.target === modal) {
+                  modal.style.display = "none";
+              }
+          };
+      </script>
+      <!-- Botón flotante del ChatBot -->
+      <button id="chatbot-btn" class="chatbot-btn" title="¿Necesitas ayuda?">
+          <i class="fas fa-comments"></i>
+      </button>
+
+
+      <!-- Ventana flotante del ChatBot -->
+      <div id="chatbot-window" class="chatbot-window">
+          <div class="chatbot-header">
+              <h4>Asistente Virtual 🎭</h4>
+              <button id="cerrarChat" class="cerrar-chat">&times;</button>
+          </div>
+          <div class="chatbot-body">
+              <!-- Pantalla de inicio de sesión -->
+              <div id="login-screen">
+                  <p>Ingrese su correo y contraseña para continuar:</p>
+                  <input type="email" id="correo" placeholder="Correo electrónico">
+                  <input type="password" id="contrasena" placeholder="Contraseña">
+                  <button id="iniciarChat">Iniciar Chat</button>
+              </div>
+
+              <!-- Pantalla de preguntas -->
+              <div id="preguntas-screen" style="display:none;">
+                  <p>Seleccione su problema:</p>
+                  <ul class="preguntas-lista">
+                      <li class="pregunta-item">❌ No me llega mi pedido</li>
+                      <li class="pregunta-item">📦 Pedido incorrecto</li>
+                      <li class="pregunta-item">💳 Problemas con el pago</li>
+                      <li class="pregunta-item">📅 Quiero cambiar la fecha de entrega</li>
+                      <li class="pregunta-item">📨 Quiero devolver mi disfraz</li>
+                      <li class="pregunta-item">🧾 Necesito comprobante de pago</li>
+                  </ul>
+              </div>
+
+              <!-- Pantalla de chat -->
+              <div id="chat-screen" style="display:none;">
+                  <div id="chat-log" class="chat-log"></div>
+                  <input type="text" id="chat-input" placeholder="Escribe tu mensaje...">
+                  <button id="enviarMsg">Enviar</button>
+              </div>
+          </div>
+      </div>
+
+
+  </body>
+</html>

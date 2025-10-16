@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atención al Cliente - LookStore</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6)), url('imagenes/pagina3fondo.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        header {
+            text-align: center;
+            padding: 100px 20px 40px;
+        }
+
+            header h1 {
+                font-size: 3rem;
+                font-weight: 800;
+                color: #ff6600;
+                text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+                letter-spacing: 2px;
+            }
+
+        .contenido {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(255, 102, 0, 0.4);
+            text-align: center;
+        }
+
+            .contenido h2 {
+                color: #ff6600;
+                font-size: 2rem;
+                margin-bottom: 15px;
+            }
+
+            .contenido p {
+                font-size: 1.1rem;
+                line-height: 1.8;
+                margin-bottom: 25px;
+            }
+
+        .contacto-info {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            width: 250px;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(255, 102, 0, 0.4);
+            transition: 0.3s;
+        }
+
+            .contact-card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 20px rgba(255, 165, 0, 0.8);
+            }
+
+            .contact-card i {
+                font-size: 2rem;
+                color: #ff6600;
+                margin-bottom: 10px;
+            }
+
+            .contact-card p {
+                font-size: 1rem;
+                color: #fff;
+            }
+
+        .volver {
+            display: inline-block;
+            margin-top: 40px;
+            background: #ff6600;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+            .volver:hover {
+                background: #ffa640;
+                transform: scale(1.05);
+            }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            .contact-card {
+                width: 90%;
+            }
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a2d9d5c6c4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <h1>ATENCIÓN AL CLIENTE</h1>
+    </header>
+
+    <section class="contenido">
+        <h2>¿Necesitas ayuda?</h2>
+        <p>
+            Nuestro equipo está aquí para ayudarte con cualquier duda o inconveniente.
+            Si tienes problemas con tu pedido, pagos, o necesitas más información, comunícate con nosotros por los siguientes medios:
+        </p>
+
+        <div class="contacto-info">
+            <div class="contact-card">
+                <i class="fas fa-phone-alt"></i>
+                <p><strong>Teléfono:</strong><br> +51 928 113 115</p>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-envelope"></i>
+                <p><strong>Correo:</strong><br> ventas@lookstore.pe</p>
+            </div>
+            <div class="contact-card">
+                <i class="fab fa-whatsapp"></i>
+                <p><strong>WhatsApp:</strong><br> +51 987 654 321</p>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <p><strong>Dirección:</strong><br> Av. Aviación 5024, Surco, Lima</p>
+            </div>
+        </div>
+
+        <h2>Horarios de atención</h2>
+        <p>
+            🕒 Lunes a Viernes: 11:00 - 20:00 <br>
+            📅 Sábados: 11:00 - 18:00 <br>
+            ❌ Domingos: Cerrado
+        </p>
+
+        <a href="index.html" class="volver">← Volver al inicio</a>
+    </section>
+
+</body>
+</html>
