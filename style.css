@@ -782,7 +782,7 @@ header, nav, .navbar {
 
 .productos-destacados {
     position: relative;
-    background-image: url("imagenes/fondo.jpg");
+    background-image: url("imagenes/FONDO OFIS.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -893,7 +893,7 @@ header, main, section {
 /* Asegura que .productos-destacados empiece exactamente pegado */
 .productos-destacados {
     position: relative;
-    background-image: url("imagenes/fondo.jpg");
+    background-image: url("imagenes/FONDO OFIS.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
@@ -1585,7 +1585,7 @@ header, main, section {
 /* Fondo translúcido para la sección de videos */
 .videos-disfraces {
     position: relative;
-    background-image: url("imagenes/fondo.jpg"); /* tu fondo Halloween */
+    background-image: url("imagenes/FONDO OFIS.jpg"); /* tu fondo Halloween */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -1635,4 +1635,5 @@ footer {
     position: relative;
     z-index: 2;
 }
+
 
