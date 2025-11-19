@@ -331,6 +331,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // LOGIN (simulado)
     btnLogin.addEventListener("click", function () {
+        e.preventDefault();
         const correo = document.getElementById("correo").value.trim();
         const contra = document.getElementById("contra").value.trim();
         
@@ -349,6 +350,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 });
+
 
 
 
