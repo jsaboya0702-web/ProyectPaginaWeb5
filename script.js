@@ -366,13 +366,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     btnLogin.addEventListener("click", function () {
 
-    const correo = document.getElementById("correo").value.trim();
-    const contra = document.getElementById("contra").value.trim();
+    let correo = document.getElementById("correo").value.trim();
+    let contra = document.getElementById("contra").value.trim();
 
+    // Validación
     if (correo === "" || contra === "") {
-        alert("Debes completar ambos campos.");
+        mostrarMensaje("⚠️ Debe completar ambos campos.");
         return;
     }
+
+    // Si todo está completo
+    mostrarMensaje("✔️ Datos correctos. Iniciando sesión...");
+});
 
     // Si llena ambos → entra
     alert("Inicio de sesión exitoso!");
@@ -381,6 +386,7 @@ document.addEventListener("DOMContentLoaded", function () {
  });
 
 });
+
 
 
 
