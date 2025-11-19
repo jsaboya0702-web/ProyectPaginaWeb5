@@ -395,6 +395,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+document.querySelectorAll(".cart-button").forEach(btn => {
+    btn.addEventListener("click", () => {
+        mostrarMensaje("Producto agregado al carrito");
+    });
+});
+
+document.querySelectorAll(".cart-button").forEach(btn => {
+    btn.addEventListener("click", () => {
+        mostrarMensaje("Producto agregado al carrito");
+    });
+});
+
+function mostrarMensaje(texto) {
+    let alerta = document.createElement("div");
+    alerta.className = "alerta-carrito";
+    alerta.textContent = texto;
+
+    document.body.appendChild(alerta);
+
+    setTimeout(() => {
+        alerta.classList.add("mostrar");
+    }, 50);
+
+    setTimeout(() => {
+        alerta.classList.remove("mostrar");
+        setTimeout(() => alerta.remove(), 300);
+    }, 2500);
+}
+
+
 
 
 
