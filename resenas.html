@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tus reseñas</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<h1 class="titulo-pagina">⭐ Tus reseñas</h1>
+
+<div class="contenedor-resenas">
+    <textarea id="textoResena" placeholder="Escribe tu opinión sobre un producto..."></textarea>
+    <button onclick="guardarResena()">Enviar reseña</button>
+</div>
+
+<h2 class="subtitulo">Reseñas enviadas</h2>
+<div id="lista-resenas"></div>
+
+<script>
+    function guardarResena() {
+        let texto = document.getElementById("textoResena").value;
+        if (texto.trim() === "") return alert("Escribe algo antes de enviar");
+
+        let reseñas = JSON.parse(localStorage.getItem("reseñas")) || [];
+        reseñas.push({ texto, fecha: new Date().toLocaleString() });
+        localStorage.setItem("reseñas", JSON.stringify(reseñas));
+
+        location.reload();
+    }
+
+    let reseñas = JSON.parse(localStorage.getItem("reseñas")) || [];
+    let cont = document.getElementById("lista-resenas");
+
+    reseñas.forEach(r => {
+        cont.innerHTML += `
+            <div class="tarjeta-resena">
+                <p>${r.texto}</p>
+                <span>${r.fecha}</span>
+            </div>
+        `;
+    });
+</script>
+
+</body>
+</html>
