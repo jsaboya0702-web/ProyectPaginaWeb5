@@ -305,7 +305,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Si quieres que el chat abra automáticamente minimizado o centrado, lo puedes controlar aquí.
 });
 
-<script>
+
 // ABRIR MODAL
 document.getElementById("btnOpenLogin").onclick = function () {
     document.getElementById("loginModal").style.display = "flex";
@@ -336,6 +336,7 @@ document.getElementById("btnLogin").onclick = function () {
     }
 };
 </script>
+
 
 
 
