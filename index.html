@@ -906,26 +906,22 @@
           </div>
       </div>
 
-   <!-- Modal Login -->
+   <!-- Modal de Login Profesional -->
 <div id="loginModal" class="modal">
     <div class="modal-content">
 
-        <!-- Botón de cerrar -->
-        <span class="close-btn" id="closeModal">✕</span>
+        <button class="close-btn" onclick="closeLogin()">✕</button>
 
-        <h2 class="modal-title">LOOKSTORE</h2>
+        <h2 class="logo-title">LOOKSTORE</h2>
 
-        <input type="email" id="email" placeholder="Correo electrónico" class="modal-input">
-        <input type="password" id="password" placeholder="Contraseña" class="modal-input">
+        <input type="email" id="email" placeholder="Correo electrónico">
+        <input type="password" id="password" placeholder="Contraseña">
 
-        <button class="modal-btn">Iniciar Sesión</button>
+        <button class="login-btn" onclick="fakeLogin()">Iniciar Sesión</button>
 
-        <button class="modal-register">Registrarme</button>
+        <a href="#" class="register-link">Registrarme</a>
     </div>
 </div>
-
-
-
   </body>
 
 </html>
