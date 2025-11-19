@@ -314,11 +314,15 @@ document.querySelector('a[href="#"]')
         }
     });
 
-// Cerrar el modal si hacen clic fuera del cuadro
-window.addEventListener("click", function (e) {
-    const modal = document.getElementById("loginModal");
-    if (e.target === modal) {
-        modal.style.display = "none";
+// abrir modal
+document.getElementById("btnLogin").addEventListener("click", function() {
+    document.getElementById("loginModal").style.display = "flex";
+});
+
+// cerrar modal al hacer clic afuera
+window.addEventListener("click", function(e) {
+    if (e.target === document.getElementById("loginModal")) {
+        document.getElementById("loginModal").style.display = "none";
     }
 });
 
