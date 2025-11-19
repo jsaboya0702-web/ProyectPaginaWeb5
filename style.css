@@ -1635,6 +1635,37 @@ footer {
     position: relative;
     z-index: 2;
 }
+/* ✨ Efecto de luz dorada al pasar el mouse */
+.golden-hover {
+    position: relative;
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+
+.golden-hover:hover {
+    color: #ffd700; /* dorado */
+    text-shadow: 0 0 10px #ffd700,
+                 0 0 20px #ffea8a,
+                 0 0 35px #fff2b3;
+}
+
+/* Opcional: Línea luminosa debajo */
+.golden-hover::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #ffbb00, #fff6c4);
+    transition: width 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.golden-hover:hover::after {
+    width: 100%;
+}
+
 
 
 
