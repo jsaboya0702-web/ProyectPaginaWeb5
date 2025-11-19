@@ -1,4 +1,4 @@
-﻿body {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -388,7 +388,7 @@ footer {
 
         /* Hover efecto */
         .menu-dropdown a:hover {
-            background-color: #f0f0f0;
+            background-color: #cc0000;
         }
 /* === Menú Filtros Moderno === */
 .dropdown {
@@ -867,14 +867,14 @@ header, nav, .navbar {
     cursor: pointer;
     border-radius: 10px;
     border: none;
-    background-color: orange;
-    color: black;
+    background-color: #cc0000;
+    color: white;
     font-weight: bold;
     transition: background 0.3s ease;
 }
 
     .boton-vermas:hover {
-        background-color: #ff6600;
+        background-color: #990000;
     }
 
 /* 🔧 Elimina cualquier espacio entre secciones y el fondo */
@@ -1195,7 +1195,7 @@ header, main, section {
   width: 80%;
   max-width: 600px;
   text-align: justify;
-  border: 2px solid #ff6600;
+  border: 2px solid #cc0000;
   box-shadow: 0 0 15px rgba(204, 0, 0, 0.5);
   animation: aparecer 0.3s ease-in-out;
 }
