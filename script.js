@@ -331,8 +331,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // LOGIN (simulado)
     btnLogin.addEventListener("click", function () {
-        let correo = document.getElementById("correo").value.trim();
-        let contra = document.getElementById("contra").value.trim();
+        const correo = document.getElementById("correo").value.trim();
+        const contra = document.getElementById("contra").value.trim();
+        
+         console.log("Correo:", correo);     // DEBUG
+         console.log("Contra:", contra);     // DEBUG
  
         // Validación correcta:
         if (correo === "" || contra === "") {
@@ -340,12 +343,13 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // Si llenó ambos campos → entrar a la página
-        modal.style.display = "none";
-        window.location.href = "index.html";
-    });
+           // Si los dos campos tienen texto → SÍ ENTRA
+    modal.style.display = "none";
+    window.location.href = "index.html";
+});
 
 });
+
 
 
 
