@@ -401,12 +401,6 @@ document.querySelectorAll(".cart-button").forEach(btn => {
     });
 });
 
-document.querySelectorAll(".cart-button").forEach(btn => {
-    btn.addEventListener("click", () => {
-        mostrarMensaje("Producto agregado al carrito");
-    });
-});
-
 function mostrarMensaje(texto) {
     let alerta = document.createElement("div");
     alerta.className = "alerta-carrito";
@@ -423,6 +417,8 @@ function mostrarMensaje(texto) {
         setTimeout(() => alerta.remove(), 300);
     }, 2500);
 }
+
+
 
 
 
