@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tus pedidos</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<h1 class="titulo-pagina">📦 Tus pedidos</h1>
+<div id="lista-pedidos" class="contenedor-pedidos"></div>
+
+<script>
+    let pedidos = JSON.parse(localStorage.getItem("pedidos")) || [];
+    const contenedor = document.getElementById("lista-pedidos");
+
+    if (pedidos.length === 0) {
+        contenedor.innerHTML = "<p class='mensaje-vacio'>No tienes pedidos aún.</p>";
+    } else {
+        pedidos.forEach(p => {
+            contenedor.innerHTML += `
+                <div class="tarjeta-pedido">
+                    <img src="${p.imagen}" class="img-pedido">
+                    <h3>${p.nombre}</h3>
+                    <p>Precio: ${p.precio}</p>
+                    <p>Fecha del pedido: ${p.fecha}</p>
+                </div>
+            `;
+        });
+    }
+</script>
+
+</body>
+</html>
