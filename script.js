@@ -305,7 +305,22 @@ document.addEventListener("DOMContentLoaded", () => {
     // Si quieres que el chat abra automáticamente minimizado o centrado, lo puedes controlar aquí.
 });
 
+// Abrir modal al hacer clic en LOGIN / REGISTRO
+document.querySelector('a[href="#"]')
+    .addEventListener("click", function (event) {
+        if (event.target.textContent.includes("LOGIN")) {
+            event.preventDefault();
+            document.getElementById("loginModal").style.display = "flex";
+        }
+    });
 
+// Cerrar el modal si hacen clic fuera del cuadro
+window.addEventListener("click", function (e) {
+    const modal = document.getElementById("loginModal");
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+});
 
 
 
