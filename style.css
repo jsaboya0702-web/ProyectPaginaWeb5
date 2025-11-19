@@ -1735,79 +1735,76 @@ footer {
     background: #222;
 }
 
-/* Fondo oscuro difuminado */
+/* Fondo oscuro */
 .modal {
-    display: none; 
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.7);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(3px);
     justify-content: center;
     align-items: center;
-    z-index: 2000;
+    z-index: 9999;
 }
 
-/* Caja del modal */
+/* Caja */
 .modal-content {
+    width: 380px;
     background: #111;
     padding: 30px;
-    width: 350px;
-    border-radius: 15px;
+    border-radius: 12px;
     text-align: center;
     color: white;
-    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+    border: 1px solid gold;
 }
 
 /* Título */
 .modal-title {
     font-size: 28px;
-    margin-bottom: 20px;
-    color: #f8c14e;
+    margin-bottom: 25px;
+    font-weight: bold;
+    color: gold;
 }
 
 /* Inputs */
 .modal-input {
     width: 100%;
     padding: 12px;
-    margin: 10px 0;
-    border: none;
+    margin: 8px 0;
     border-radius: 8px;
-    outline: none;
-    font-size: 15px;
+    border: none;
+    background: #222;
+    color: white;
 }
 
-/* Botón iniciar sesión */
+.modal-input:focus {
+    outline: 1px solid gold;
+}
+
+/* Botón iniciar */
 .modal-btn {
     width: 100%;
     padding: 12px;
-    margin-top: 10px;
-    background: #f8c14e;
-    color: black;
-    font-weight: bold;
+    background: gold;
     border: none;
     border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
+    margin-top: 10px;
+    font-weight: bold;
 }
 
-.modal-btn:hover {
-    background: #ffd978;
-}
-
-/* Texto registrarse */
+/* Botón registrarme */
 .modal-register {
+    width: 100%;
     margin-top: 15px;
-    font-size: 14px;
+    background: transparent;
+    border: none;
+    color: gold;
+    font-size: 15px;
 }
 
-.modal-link {
-    color: #f8c14e;
-    text-decoration: underline;
-    cursor: pointer;
-}
 
 
 
