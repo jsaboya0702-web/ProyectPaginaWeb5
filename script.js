@@ -307,86 +307,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  // IDs que usamos en el HTML (ajusta si tus ids difieren)
-  const idOpen = "btnOpenLogin";   // <a id="btnOpenLogin">LOGIN / REGISTRO</a>
-  const idModal = "loginModal";    // <div id="loginModal" class="modal">...
-  const idClose = "closeLogin";    // <span id="closeLogin">✕</span>
-  const idBtnLogin = "btnLogin";   // <button id="btnLogin">Iniciar Sesión</button>
-  const idCorreo = "correo";       // <input id="correo">
-  const idContra = "contra";       // <input id="contra">
 
-  // Helper: buscar elemento por id o por texto (fallback)
-  function findOpenButton() {
-    let el = document.getElementById(idOpen);
-    if (el) return el;
-    // fallback: buscar primer enlace dentro del menu con texto "LOGIN"
-    const links = Array.from(document.querySelectorAll(".menu-dropdown a, nav a, ul a"));
-    return links.find(a => /login/i.test(a.textContent)) || null;
-  }
+    const btnOpen = document.getElementById("btnOpenLogin");
+    const modal = document.getElementById("loginModal");
+    const btnClose = document.getElementById("closeLogin");
+    const btnLogin = document.getElementById("btnLogin");
 
-  const btnOpen = findOpenButton();
-  const modal = document.getElementById(idModal);
-  const btnClose = document.getElementById(idClose);
-  const btnLogin = document.getElementById(idBtnLogin);
-  const inputCorreo = document.getElementById(idCorreo);
-  const inputContra = document.getElementById(idContra);
-
-  // Debug rápido si algo falta
-  if (!modal) {
-    console.error("Modal no encontrado. Asegúrate de tener: <div id=\"" + idModal + "\">...</div>");
-    return;
-  }
-  if (!btnOpen) console.warn("Botón abrir login no encontrado por id. Buscando por texto 'LOGIN' falló.");
-  if (!btnClose) console.warn("Botón cerrar (X) no encontrado (id='" + idClose + "').");
-  if (!btnLogin) console.warn("Botón iniciar sesión no encontrado (id='" + idBtnLogin + "').");
-  if (!inputCorreo || !inputContra) console.warn("Inputs correo/contra no encontrados con ids: '" + idCorreo + "', '" + idContra + "'.");
-
-  // Abrir modal
-  if (btnOpen) {
+    // ABRIR
     btnOpen.addEventListener("click", function (e) {
-      e.preventDefault();
-      modal.style.display = "flex";
-      // opcional: focus en correo
-      setTimeout(()=>{ if (inputCorreo) inputCorreo.focus(); }, 80);
+        e.preventDefault();
+        modal.style.display = "flex";
     });
-  }
 
-  // Cerrar con X
-  if (btnClose) {
+    // CERRAR CON X
     btnClose.addEventListener("click", function () {
-      modal.style.display = "none";
+        modal.style.display = "none";
     });
-  }
 
-  // Cerrar al hacer click fuera del contenido
-  modal.addEventListener("click", function (ev) {
-    if (ev.target === modal) modal.style.display = "none";
-  });
-
-  // Previene que otros scripts intercepten el click (delegación segura)
-  if (btnLogin) {
-    btnLogin.addEventListener("click", function (ev) {
-      ev.preventDefault();
-      const correo = (inputCorreo && inputCorreo.value || "").trim();
-      const contra = (inputContra && inputContra.value || "").trim();
-      if (!correo || !contra) {
-        alert("Por favor completa correo y contraseña.");
-        return;
-      }
-      // Inicio de sesión simulado
-      modal.style.display = "none";
-      // redirigir a la página que quieras (ajusta)
-      window.location.href = "index.html";
+    // CERRAR HACIENDO CLICK FUERA DEL CUADRO
+    modal.addEventListener("click", function (e) {
+        if (e.target === modal) modal.style.display = "none";
     });
-  }
 
-  // Atajo: tecla ESC para cerrar modal
-  document.addEventListener("keydown", function (ev) {
-    if (ev.key === "Escape" && modal.style.display === "flex") {
-      modal.style.display = "none";
-    }
-  });
+    // LOGIN (simulado)
+    btnLogin.addEventListener("click", function () {
+        const correo = document.getElementById("correo").value.trim();
+        const contra = document.getElementById("contra").value.trim();
+
+        if (!correo || !contra) {
+            alert("Completa los campos");
+            return;
+        }
+
+        modal.style.display = "none";
+        window.location.href = "index.html";
+    });
+
 });
+
 
 
 
