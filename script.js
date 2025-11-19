@@ -395,28 +395,61 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-document.querySelectorAll(".cart-button").forEach(btn => {
-    btn.addEventListener("click", () => {
-        mostrarMensaje("Producto agregado al carrito");
+
+
+// ===============================
+// FUNCIÓN GLOBAL (VA FUERA DEL DOC)
+// ===============================
+function mostrarMensaje(texto) {
+    let msg = document.createElement("div");
+    msg.className = "alert-msg";
+    msg.innerText = texto;
+    document.body.appendChild(msg);
+
+    setTimeout(() => msg.classList.add("show"), 50);
+
+    setTimeout(() => {
+        msg.classList.remove("show");
+        setTimeout(() => msg.remove(), 300);
+    }, 2500);
+}
+
+// ===============================
+// EVENTOS DE PRODUCTOS (VA FUERA O DENTRO DEL DOC)
+// ===============================
+document.addEventListener("DOMContentLoaded", () => {
+
+    document.querySelectorAll(".producto").forEach((producto) => {
+
+        const favButton = producto.querySelector(".fav-button");
+        const cartButton = producto.querySelector(".cart-button");
+        const viewButton = producto.querySelector(".view-button");
+
+        // === CARRITO ===
+        cartButton.addEventListener("click", () => {
+            mostrarMensaje("Producto agregado al carrito 🛒");
+        });
+
+        // === FAVORITO ===
+        favButton.addEventListener("click", () => {
+            favButton.classList.toggle("fav-active");
+
+            if (favButton.classList.contains("fav-active")) {
+                mostrarMensaje("Añadido a favoritos ❤️");
+            } else {
+                mostrarMensaje("Eliminado de favoritos 💔");
+            }
+        });
+
+        // === VER DETALLE ===
+        viewButton.addEventListener("click", () => {
+            mostrarMensaje("Mostrando detalles 👁");
+        });
+
     });
 });
 
-function mostrarMensaje(texto) {
-    let alerta = document.createElement("div");
-    alerta.className = "alerta-carrito";
-    alerta.textContent = texto;
 
-    document.body.appendChild(alerta);
-
-    setTimeout(() => {
-        alerta.classList.add("mostrar");
-    }, 50);
-
-    setTimeout(() => {
-        alerta.classList.remove("mostrar");
-        setTimeout(() => alerta.remove(), 300);
-    }, 2500);
-}
 
 
 
