@@ -364,21 +364,23 @@ document.addEventListener("DOMContentLoaded", function () {
         if (e.target === modal) modal.style.display = "none";
     });
 
-    // LOGIN (simulado)
     btnLogin.addEventListener("click", function () {
-        const correo = document.getElementById("correo").value.trim();
-        const contra = document.getElementById("contra").value.trim();
 
-        if (!correo || !contra) {
-            alert("Completa los campos");
-            return;
-        }
+    const correo = document.getElementById("correo").value.trim();
+    const contra = document.getElementById("contra").value.trim();
 
-        modal.style.display = "none";
-        window.location.href = "index.html";
-    });
+    if (correo === "" || contra === "") {
+        alert("Debes completar ambos campos.");
+        return;
+    }
+
+    // Login correcto
+    modal.style.display = "none";
+    window.location.href = "index.html"; // o la página que quieras
+ });
 
 });
+
 
 
 
