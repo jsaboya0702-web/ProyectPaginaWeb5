@@ -1905,4 +1905,23 @@ footer {
 .top-buttons button:hover {
     background: rgba(0,0,0,0.9);
 }
+.alerta-carrito {
+    position: fixed;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #00c853;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 9999;
+}
+
+.alerta-carrito.mostrar {
+    top: 20px;
+}
+
 
