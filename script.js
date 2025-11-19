@@ -118,7 +118,7 @@ function toggleCategorias() {
 
 function toggleMenu() {
     const menu = document.getElementById("menuDropdown");
-    menu.classList.toggle("show");
+    menu.classList.toggle("active");
 
     const panel = document.getElementById("panelFiltros");
     if (panel && panel.classList.contains("show")) {
@@ -304,6 +304,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Si quieres que el chat abra automáticamente minimizado o centrado, lo puedes controlar aquí.
 });
+
 
 
 
