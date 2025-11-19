@@ -1665,6 +1665,30 @@ footer {
 .golden-hover:hover::after {
     width: 100%;
 }
+.lista-simple li {
+    color: white;
+    background: rgba(255,255,255,0.06);
+    padding: 12px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.perfil-container {
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    color: white;
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.perfil-foto {
+    width: 120px;
+    border-radius: 100px;
+    margin-bottom: 15px;
+}
+
 
 
 
