@@ -132,7 +132,7 @@ document.addEventListener("click", (e) => {
     const dentroMenu = e.target.closest(".menu-container");
     if (!dentroCategoria && !dentroMenu) {
         document.getElementById("panelCategorias")?.classList.remove("show");
-        document.getElementById("menuDropdown")?.classList.remove("show");
+        document.getElementById("menuDropdown")?.classList.remove("active");
     }
 });
 
@@ -304,6 +304,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Si quieres que el chat abra automáticamente minimizado o centrado, lo puedes controlar aquí.
 });
+
 
 
 
