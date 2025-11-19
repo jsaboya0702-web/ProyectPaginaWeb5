@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Favoritos</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<h1 class="titulo-pagina">❤️ Tus favoritos</h1>
+<div id="lista-favoritos" class="contenedor-pedidos"></div>
+
+<script>
+    let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+    const cont = document.getElementById("lista-favoritos");
+
+    if (favoritos.length === 0) {
+        cont.innerHTML = "<p class='mensaje-vacio'>No tienes productos favoritos.</p>";
+    } else {
+        favoritos.forEach(f => {
+            cont.innerHTML += `
+                <div class="tarjeta-pedido">
+                    <img src="${f.imagen}">
+                    <h3>${f.nombre}</h3>
+                    <p>Precio: ${f.precio}</p>
+                </div>
+            `;
+        });
+    }
+</script>
+
+</body>
+</html>
