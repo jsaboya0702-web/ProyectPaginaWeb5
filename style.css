@@ -1826,3 +1826,22 @@ footer {
     transform: scale(1.05);
 }
 
+.titulo-login {
+    font-size: 32px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 20px;
+
+    /* Colores negro / blanco combinados */
+    color: #ffffff;
+    background: linear-gradient(90deg, #000000, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Efecto iluminado */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8),
+                 0 0 12px rgba(0, 0, 0, 0.6);
+
+    /* Más presencia */
+    letter-spacing: 2px;
+}
