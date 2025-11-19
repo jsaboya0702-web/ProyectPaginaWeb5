@@ -1848,6 +1848,21 @@ footer {
     animation: glow 2.5s infinite alternate;
 }
 
+/* Botón X para cerrar modal */
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 20px;
+    color: gold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: white;
+    text-shadow: 0 0 10px gold;
+}
 
 
 
