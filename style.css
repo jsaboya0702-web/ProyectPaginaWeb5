@@ -44,7 +44,7 @@ header::before {
     position: relative;
     z-index: 2;
     font-family: 'Poppins', sans-serif;
-    text-shadow: 0 0 10px rgba(255, 150, 0, 0.8), 0 0 20px rgba(255, 100, 0, 0.6);
+    text-shadow: 0 0 10px rgba(255, 150, 0, 0.8), 0 0 20px rgba(204, 0, 0, 0.8);
     transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
@@ -87,7 +87,7 @@ header::before {
     bottom: -4px;
     width: 0%;
     height: 2px;
-   background: linear-gradient(90deg, #ff8c00, #ff2e63);
+   background: linear-gradient(90deg, #cc0000, ff0033);
     transition: width 0.3s ease;
 }
 
