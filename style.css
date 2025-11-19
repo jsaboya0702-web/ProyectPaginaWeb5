@@ -244,7 +244,7 @@ main {
     margin-top: 8px;
 }
 .cart-button:hover {
-    background-color: #ff8c00;
+    background-color: #cc0000;
     transform: scale(1.05);
 }
 
@@ -253,7 +253,7 @@ main {
     font-size: 0.9rem;
 }
 .rating .star.filled {
-    color: #ffcc00;
+    color: #cc0000;
 }
 
 .rating .star.half {
@@ -569,7 +569,7 @@ header::before {
 }
 
 .menu-dropdown a:hover {
-  background-color: #ff8c00;
+  background-color: #cc0000;
 }
 
 /* Filtros */
@@ -614,7 +614,7 @@ header::before {
 }
 
 .dropdown-btn:hover {
-  color: #ffae00;
+  color: #cc0000;
 }
 
 /* === REPARAR DESPLEGABLE DE FILTROS Y MENU === */
@@ -644,7 +644,7 @@ header::before {
 }
 
     .filter-section h4 {
-        color: #ff9900;
+        color: #cc0000;
         margin-bottom: 8px;
     }
 
