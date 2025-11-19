@@ -1735,103 +1735,91 @@ footer {
     background: #222;
 }
 
-/* Fondo oscuro difuminado */
+/* Fondo oscuro */
 .modal {
     display: none;
     position: fixed;
-    z-index: 9999;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
-    backdrop-filter: blur(7px);
-    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
     justify-content: center;
     align-items: center;
 }
 
-/* Caja principal */
+/* Caja del modal */
 .modal-content {
-    background: radial-gradient(circle, #1a1a1a, #0d0d0d);
-    padding: 40px;
-    border-radius: 20px;
-    width: 420px;
+    background: #fff;
+    width: 380px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
     position: relative;
-    text-align: center;
-    border: 1px solid rgba(255, 217, 0, 0.2);
-    box-shadow: 0 0 40px rgba(255, 217, 0, 0.4);
+    animation: fadeIn 0.3s ease;
 }
 
-/* X de cerrar */
-.close-btn {
+/* Animación */
+@keyframes fadeIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+/* Botón X */
+.close {
     position: absolute;
-    top: 12px;
-    right: 12px;
-    background: transparent;
-    border: none;
-    font-size: 22px;
+    right: 15px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
     color: red;
     cursor: pointer;
-    font-weight: bold;
+    transition: 0.3s;
 }
 
-/* Título LOOKSTORE con brillo */
-.logo-title {
-    font-size: 34px;
-    font-weight: bold;
-    color: #ffd700;
-    text-shadow: 0 0 15px #ffd700, 0 0 30px #ffea73;
-    margin-bottom: 20px;
+.close:hover {
+    color: darkred;
 }
 
 /* Inputs */
 .modal-content input {
     width: 100%;
-    padding: 12px;
-    border-radius: 10px;
-    margin: 10px 0;
-    border: none;
-    background: #222;
-    color: white;
-    outline: none;
-    font-size: 15px;
+    padding: 10px;
+    margin: 8px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }
 
-/* Botón de iniciar sesión */
-.login-btn {
+/* Botón */
+.btn-modal {
     width: 100%;
     padding: 12px;
-    background: #ffd700;
+    background: #1a73e8;
+    color: white;
     border: none;
-    border-radius: 10px;
-    margin-top: 15px;
+    border-radius: 8px;
     font-size: 16px;
-    font-weight: bold;
     cursor: pointer;
 }
 
-/* Enlace registrarme */
-.register-link {
-    display: block;
-    margin-top: 15px;
-    color: #ffd700;
-    text-decoration: none;
-    font-size: 16px;
+.btn-modal:hover {
+    background: #175ecd;
 }
+
+/* Efecto iluminado del LOGIN/REGISTRO */
 #btnOpenLogin {
+    color: white;
     font-weight: bold;
-    color: #ffd700; /* dorado */
-    text-shadow: 
-        0 0 6px rgba(255, 215, 0, 0.8),
-        0 0 12px rgba(255, 215, 0, 0.6),
-        0 0 18px rgba(255, 215, 0, 0.5);
+    padding: 8px 18px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
     transition: 0.3s ease;
 }
 
 #btnOpenLogin:hover {
-    color: #fff;
-    text-shadow: 
-        0 0 8px rgba(255, 255, 255, 1),
-        0 0 18px rgba(255, 215, 0, 1),
-        0 0 28px rgba(255, 215, 0, 0.8);
-    transform: scale(1.05);
+    background: rgba(255,255,255,0.35);
+    box-shadow: 0 0 12px rgba(255,255,255,0.8);
 }
 
