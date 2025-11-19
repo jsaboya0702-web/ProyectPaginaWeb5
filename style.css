@@ -1804,6 +1804,51 @@ footer {
     color: gold;
     font-size: 15px;
 }
+/* Efecto brillante para LOOKSTORE */
+.modal-title {
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    color: gold;
+    text-shadow: 
+        0 0 10px gold,
+        0 0 20px gold,
+        0 0 30px gold,
+        0 0 40px rgba(255,215,0,0.8);
+    animation: glow 2.5s infinite alternate;
+}
+
+//* Efecto brillante para LOOKSTORE */
+.modal-title {
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    color: gold;
+    text-shadow: 
+        0 0 10px gold,
+        0 0 20px gold,
+        0 0 30px gold,
+        0 0 40px rgba(255,215,0,0.8);
+    animation: glow 2.5s infinite alternate;
+}
+
+/* Animación del brillo */
+@keyframes glow {
+    0% {
+        text-shadow: 
+            0 0 10px gold,
+            0 0 20px gold,
+            0 0 30px gold;
+    }
+    100% {
+        text-shadow: 
+            0 0 20px gold,
+            0 0 40px gold,
+            0 0 60px gold,
+            0 0 80px rgba(255,215,0,1);
+    }
+}
+
 
 
 
