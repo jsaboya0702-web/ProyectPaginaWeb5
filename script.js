@@ -338,6 +338,10 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Correo:", correo);
     console.log("Contra:", contra);
 
+     alert("Valor de correo: [" + correo + "]");
+     alert("Valor de contra: [" + contra + "]");
+   
+
     if (correo === "" || contra === "") {
         alert("Completa los campos");
         return;
@@ -349,6 +353,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 });
+
 
 
 
