@@ -314,41 +314,31 @@ document.querySelector('a[href="#"]')
         }
     });
 
-// abrir modal
-document.getElementById("btnLogin").addEventListener("click", function() {
+<script>
+// ABRIR MODAL (usa tu botón real)
+document.getElementById("btnOpenLogin").onclick = function () {
     document.getElementById("loginModal").style.display = "flex";
-});
+};
 
-// cerrar modal al hacer clic afuera
-window.addEventListener("click", function(e) {
-    if (e.target === document.getElementById("loginModal")) {
-        document.getElementById("loginModal").style.display = "none";
-    }
-});
-
-// Botón de iniciar sesión sin base de datos
-document.querySelector(".modal-btn").addEventListener("click", function() {
-
-    // Puedes capturar valores si quieres
-    let email = document.getElementById("email").value;
-    let pass = document.getElementById("password").value;
-
-    // Validación mínima (solo evita campos vacíos)
-    if (email.trim() === "" || pass.trim() === "") {
-        alert("Debes ingresar correo y contraseña.");
-        return;
-    }
-
-    // Ingreso directo sin BD
-    window.location.href = "index.html";  // Cambia por la página que quieras
-});
-document.getElementById("loginModal").style.display = "none";
-
-
-// Cerrar modal con la X
-document.getElementById("closeModal").addEventListener("click", function() {
+// CERRAR CON LA X
+document.getElementById("closeLogin").onclick = function () {
     document.getElementById("loginModal").style.display = "none";
-});
+};
+
+// LOGIN SIN BASE DE DATOS
+document.getElementById("btnLogin").onclick = function () {
+    let correo = document.getElementById("correo").value.trim();
+    let contra = document.getElementById("contra").value.trim();
+
+    if (correo === "" || contra === "") {
+        alert("Completa los campos.");
+    } else {
+        // Simulación de login correcto sin BD
+        window.location.href = "index.html"; // PÁGINA PRINCIPAL
+    }
+};
+</script>
+
 
 
 
