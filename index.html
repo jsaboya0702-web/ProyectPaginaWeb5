@@ -42,7 +42,7 @@
                   <div class="menu-dropdown" id="menuDropdown">
                     
                     <ul>
-                      <li><a class="golden-hover" id="btnLogin" href="#"> LOGIN / REGISTRO </a></li>
+                      <li><a href="#" id="btnOpenLogin">LOGIN / REGISTRO</a></li>
                       <li><a class="golden-hover" href="#"> TUS PEDIDOS </a></li>
                       <li><a class="golden-hover" href="#"> TUS RESEÑAS </a></li>
                       <li><a class="golden-hover" href="#"> DETALLES DEL PERFIL </a></li>
@@ -906,22 +906,22 @@
           </div>
       </div>
 
-   <!-- Modal de Login Profesional -->
-<div id="loginModal" class="modal">
+   <div id="loginModal" class="modal">
     <div class="modal-content">
 
-        <button class="close-btn" onclick="closeLogin()">✕</button>
+        <button id="closeLogin" class="close-btn">✕</button>
 
         <h2 class="logo-title">LOOKSTORE</h2>
 
-        <input type="email" id="email" placeholder="Correo electrónico">
-        <input type="password" id="password" placeholder="Contraseña">
+        <input type="email" id="correo" placeholder="Correo electrónico">
+        <input type="password" id="contra" placeholder="Contraseña">
 
-        <button class="login-btn" onclick="fakeLogin()">Iniciar Sesión</button>
+        <button id="btnLogin" class="login-btn">Iniciar Sesión</button>
 
         <a href="#" class="register-link">Registrarme</a>
     </div>
 </div>
+
   </body>
 
 </html>
