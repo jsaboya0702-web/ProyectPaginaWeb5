@@ -341,52 +341,45 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!btnLogin) console.warn("Botón iniciar sesión no encontrado (id='" + idBtnLogin + "').");
   if (!inputCorreo || !inputContra) console.warn("Inputs correo/contra no encontrados con ids: '" + idCorreo + "', '" + idContra + "'.");
 
-  // Abrir modal
-  if (btnOpen) {
+ document.addEventListener("DOMContentLoaded", function () {
+
+    const btnOpen = document.getElementById("btnOpenLogin");
+    const modal = document.getElementById("loginModal");
+    const btnClose = document.getElementById("closeLogin");
+    const btnLogin = document.getElementById("btnLogin");
+
+    // ABRIR
     btnOpen.addEventListener("click", function (e) {
-      e.preventDefault();
-      modal.style.display = "flex";
-      // opcional: focus en correo
-      setTimeout(()=>{ if (inputCorreo) inputCorreo.focus(); }, 80);
+        e.preventDefault();
+        modal.style.display = "flex";
     });
-  }
 
-  // Cerrar con X
-  if (btnClose) {
+    // CERRAR CON X
     btnClose.addEventListener("click", function () {
-      modal.style.display = "none";
+        modal.style.display = "none";
     });
-  }
 
-  // Cerrar al hacer click fuera del contenido
-  modal.addEventListener("click", function (ev) {
-    if (ev.target === modal) modal.style.display = "none";
-  });
-
-  // Previene que otros scripts intercepten el click (delegación segura)
-  if (btnLogin) {
-    btnLogin.addEventListener("click", function (ev) {
-      ev.preventDefault();
-      const correo = (inputCorreo && inputCorreo.value || "").trim();
-      const contra = (inputContra && inputContra.value || "").trim();
-      if (!correo || !contra) {
-        alert("Por favor completa correo y contraseña.");
-        return;
-      }
-      // Inicio de sesión simulado
-      modal.style.display = "none";
-      // redirigir a la página que quieras (ajusta)
-      window.location.href = "index.html";
+    // CERRAR HACIENDO CLICK FUERA DEL CUADRO
+    modal.addEventListener("click", function (e) {
+        if (e.target === modal) modal.style.display = "none";
     });
-  }
 
-  // Atajo: tecla ESC para cerrar modal
-  document.addEventListener("keydown", function (ev) {
-    if (ev.key === "Escape" && modal.style.display === "flex") {
-      modal.style.display = "none";
-    }
-  });
+    // LOGIN (simulado)
+    btnLogin.addEventListener("click", function () {
+        const correo = document.getElementById("correo").value.trim();
+        const contra = document.getElementById("contra").value.trim();
+
+        if (!correo || !contra) {
+            alert("Completa los campos");
+            return;
+        }
+
+        modal.style.display = "none";
+        window.location.href = "index.html";
+    });
+
 });
+
 
 
 
