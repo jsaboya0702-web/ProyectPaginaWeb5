@@ -305,7 +305,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Si quieres que el chat abra automáticamente minimizado o centrado, lo puedes controlar aquí.
 });
 
-
 document.addEventListener("DOMContentLoaded", function () {
 
     const btnOpen = document.getElementById("btnOpenLogin");
@@ -313,66 +312,71 @@ document.addEventListener("DOMContentLoaded", function () {
     const btnClose = document.getElementById("closeLogin");
     const btnLogin = document.getElementById("btnLogin");
 
-        // ELEMENTOS DEL REGISTRO
+    // ELEMENTOS DEL REGISTRO
     const modalRegister = document.getElementById("registerModal");
     const btnCloseRegister = document.getElementById("closeRegister");
     const btnVolverLogin = document.getElementById("btnVolverLogin");
-    const btnRegistrar = document.getElementById("btnRegistrar")
+    const btnRegistrar = document.getElementById("btnRegistrar");
 
-    // ABRIR
+    // ⭐⭐⭐ FALTA EN TU CÓDIGO — AÑADIDO ⭐⭐⭐
+    const btnShowRegister = document.getElementById("btnShowRegister");
+
+    // ⭐⭐⭐ EVENTO QUE ABRE EL REGISTRO — AÑADIDO ⭐⭐⭐
+    btnShowRegister.addEventListener("click", function () {
+        modal.style.display = "none";
+        modalRegister.style.display = "flex";
+    });
+
+
+    // ABRIR LOGIN
     btnOpen.addEventListener("click", function (e) {
         e.preventDefault();
         modal.style.display = "flex";
     });
 
-    // CERRAR CON X
+    // CERRAR LOGIN CON X
     btnClose.addEventListener("click", function () {
         modal.style.display = "none";
     });
 
-    // CERRAR HACIENDO CLICK FUERA DEL CUADRO
+    // CERRAR LOGIN CLIC FUERA
     modal.addEventListener("click", function (e) {
         if (e.target === modal) modal.style.display = "none";
     });
 
     btnLogin.addEventListener("click", function (e) {
-    e.preventDefault();
+        e.preventDefault();
 
-    const correo = document.getElementById("correo").value.trim();
-    const contra = document.getElementById("contra").value.trim();
+        const correo = document.getElementById("correo").value.trim();
+        const contra = document.getElementById("contra").value.trim();
 
-    console.log("Correo:", correo);
-    console.log("Contra:", contra);
+        console.log("Correo:", correo);
+        console.log("Contra:", contra);
 
-     alert("Valor de correo: [" + correo + "]");
-     alert("Valor de contra: [" + contra + "]");
-   
+        alert("Valor de correo: [" + correo + "]");
+        alert("Valor de contra: [" + contra + "]");
 
-    if (correo === "" || contra === "") {
-        alert("Completa los campos");
-        return;
-    }
+        if (correo === "" || contra === "") {
+            alert("Completa los campos");
+            return;
+        }
 
-    modal.style.display = "none";
-    window.location.href = "index.html";
-});
-    btnCloseRegister.addEventListener("click", function () {
-    modalRegister.style.display = "none";
+        modal.style.display = "none";
+        window.location.href = "index.html";
     });
 
+    // CERRAR REGISTRO CON X
+    btnCloseRegister.addEventListener("click", function () {
+        modalRegister.style.display = "none";
+    });
 
-    // ===================================
-    // REGISTRO - VOLVER A LOGIN
-    // ===================================
+    // VOLVER A LOGIN
     btnVolverLogin.addEventListener("click", function () {
         modalRegister.style.display = "none";
         modal.style.display = "flex";
     });
 
-
-    // ===================================
-    // REGISTRO - VALIDAR FORMULARIO
-    // ===================================
+    // VALIDAR REGISTRO
     btnRegistrar.addEventListener("click", function () {
         const nombre = document.getElementById("regNombre").value.trim();
         const correo = document.getElementById("regCorreo").value.trim();
@@ -389,8 +393,9 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.style.display = "flex";
     });
 
-
 });
+
+
 
 
 
