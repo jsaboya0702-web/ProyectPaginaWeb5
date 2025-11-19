@@ -1688,14 +1688,14 @@ footer {
     border-radius: 100px;
     margin-bottom: 15px;
 }
-.header {
+header {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 999;
 }
 
-.body {
+body {
     padding-top: 120px; /* ajusta según tu header */
 }
 
