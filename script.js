@@ -6,7 +6,7 @@
     if (!header) return;
 
     function createSpooky() {
-        const emojis = ["👟", "👕", "🧥", "👖"]];
+        const emojis = ["👟", "👕", "🧥", "👖"];
         const spooky = document.createElement("div");
         spooky.classList.add("spooky");
         spooky.textContent = emojis[Math.floor(Math.random() * emojis.length)];
@@ -309,6 +309,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Si quieres que el chat abra automáticamente minimizado o centrado, lo puedes controlar aquí.
 });
+
 
 
 
