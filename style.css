@@ -1867,3 +1867,20 @@ footer {
     /* Más presencia */
     letter-spacing: 3px;
 }
+/* Botón de registro */
+.btn-register, .btn-volver {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-register:hover,
+.btn-volver:hover {
+    background-color: #666;
+}
+
