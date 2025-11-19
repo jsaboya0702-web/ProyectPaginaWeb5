@@ -329,27 +329,27 @@ document.addEventListener("DOMContentLoaded", function () {
         if (e.target === modal) modal.style.display = "none";
     });
 
-    // LOGIN (simulado)
-    btnLogin.addEventListener("click", function () {
-        e.preventDefault();
-        const correo = document.getElementById("correo").value.trim();
-        const contra = document.getElementById("contra").value.trim();
-        
-         console.log("Correo:", correo);     // DEBUG
-         console.log("Contra:", contra);     // DEBUG
- 
-        // Validación correcta:
-        if (correo === "" || contra === "") {
-            alert("Completa los campos");
-            return;
-        }
+    btnLogin.addEventListener("click", function (e) {
+    e.preventDefault();
 
-           // Si los dos campos tienen texto → SÍ ENTRA
+    const correo = document.getElementById("correo").value.trim();
+    const contra = document.getElementById("contra").value.trim();
+
+    console.log("Correo:", correo);
+    console.log("Contra:", contra);
+
+    if (correo === "" || contra === "") {
+        alert("Completa los campos");
+        return;
+    }
+
     modal.style.display = "none";
     window.location.href = "index.html";
 });
 
+
 });
+
 
 
 
