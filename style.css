@@ -1807,19 +1807,22 @@ footer {
     background: #175ecd;
 }
 
-/* Efecto iluminado del LOGIN/REGISTRO */
 #btnOpenLogin {
-    color: white;
     font-weight: bold;
-    padding: 8px 18px;
-    border-radius: 8px;
-    background: rgba(255,255,255,0.2);
-    backdrop-filter: blur(4px);
+    color: #ffd700; /* dorado */
+    text-shadow: 
+        0 0 6px rgba(255, 215, 0, 0.8),
+        0 0 12px rgba(255, 215, 0, 0.6),
+        0 0 18px rgba(255, 215, 0, 0.5);
     transition: 0.3s ease;
 }
 
 #btnOpenLogin:hover {
-    background: rgba(255,255,255,0.35);
-    box-shadow: 0 0 12px rgba(255,255,255,0.8);
+    color: #fff;
+    text-shadow: 
+        0 0 8px rgba(255, 255, 255, 1),
+        0 0 18px rgba(255, 215, 0, 1),
+        0 0 28px rgba(255, 215, 0, 0.8);
+    transform: scale(1.05);
 }
 
