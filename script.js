@@ -1,12 +1,10 @@
-﻿document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const header = document.querySelector("header");
 
-
-    // si no existe el header, no hace nada
     if (!header) return;
 
     function createSpooky() {
-        const emojis = ["👟", "👕", "🧥", "👖"];
+        const emojis = ["🌧️", "☔", "❄️", "🌬️"];
         const spooky = document.createElement("div");
         spooky.classList.add("spooky");
         spooky.textContent = emojis[Math.floor(Math.random() * emojis.length)];
@@ -15,13 +13,10 @@
         spooky.style.fontSize = Math.random() * 20 + 20 + "px";
         header.appendChild(spooky);
 
-        // Eliminar después de caer
         setTimeout(() => spooky.remove(), 6000);
     }
 
-    // Genera un elemento cada 700ms
     setInterval(createSpooky, 700);
-
 });
 
 
@@ -309,6 +304,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Si quieres que el chat abra automáticamente minimizado o centrado, lo puedes controlar aquí.
 });
+
 
 
 
