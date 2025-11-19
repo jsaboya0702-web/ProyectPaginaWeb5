@@ -8,7 +8,7 @@
 
 /* === ENCABEZADO === */
 header {
-    background-image: url("imagenes/EMCABEZADO2.jpg");
+    background-image: url("imagenes/EMCABE.jpg");
     background-size: cover;
     background-position: center;
     height: 180px;
@@ -1635,6 +1635,7 @@ footer {
     position: relative;
     z-index: 2;
 }
+
 
 
 
