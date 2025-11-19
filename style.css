@@ -1848,24 +1848,6 @@ footer {
     animation: glow 2.5s infinite alternate;
 }
 
-.close-btn {
-  position: absolute;
-  top: 10px;          /* Ajuste hacia arriba */
-  right: 12px;        /* Ajuste hacia la derecha */
-  color: red;         /* Color rojo */
-  font-size: 28px;    /* Tamaño */
-  font-weight: bold;
-  cursor: pointer;
-  user-select: none;
-  z-index: 999999;    /* Asegura que esté encima */
-}
-
-.close-btn:hover {
-  color: #ff4a4a;
-  transform: scale(1.1);
-  transition: 0.2s ease;
-}
-
 
 
 
