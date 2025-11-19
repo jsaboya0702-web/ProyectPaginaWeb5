@@ -1883,29 +1883,44 @@ footer {
 .btn-volver:hover {
     background-color: #666;
 }
-/* Contenedor de botones arriba */
-.top-buttons {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+
+/* ============================================
+   BOTONES JUNTOS: carrito - favorito - ver
+============================================ */
+.product-actions {
     display: flex;
-    gap: 8px;
+    gap: 10px;
+    align-items: center;
 }
 
-.top-buttons button {
-    background: rgba(0,0,0,0.6);
+.product-actions button {
+    background: #222;
     border: none;
     padding: 8px;
-    border-radius: 50%;
+    border-radius: 8px;
     cursor: pointer;
-    color: white;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
-.top-buttons button:hover {
-    background: rgba(0,0,0,0.9);
+.product-actions button i {
+    font-size: 18px;
+    color: white;
 }
-.alerta-carrito {
+
+/* Hover */
+.product-actions button:hover {
+    background: #444;
+}
+
+/* Corazón activado */
+.fav-button.fav-active i {
+    color: red;
+}
+
+/* ============================================
+   MENSAJE DE ALERTA FLOTANTE (carrito/favorito)
+============================================ */
+.alert-msg {
     position: fixed;
     top: -50px;
     left: 50%;
@@ -1916,12 +1931,14 @@ footer {
     border-radius: 8px;
     font-size: 16px;
     font-weight: bold;
-    transition: 0.3s;
     z-index: 9999;
+    transition: 0.3s;
 }
 
-.alerta-carrito.mostrar {
+/* Cuando aparece */
+.alert-msg.show {
     top: 20px;
 }
+
 
 
