@@ -305,39 +305,32 @@ document.addEventListener("DOMContentLoaded", () => {
     // Si quieres que el chat abra automáticamente minimizado o centrado, lo puedes controlar aquí.
 });
 
-// Abrir modal al hacer clic en LOGIN / REGISTRO
-document.querySelector('a[href="#"]')
-    .addEventListener("click", function (event) {
-        if (event.target.textContent.includes("LOGIN")) {
-            event.preventDefault();
-            document.getElementById("loginModal").style.display = "flex";
-        }
-    });
-
-<script>
-// ABRIR MODAL (usa tu botón real)
-document.getElementById("btnOpenLogin").onclick = function () {
+// ABRIR MODAL
+document.getElementById("btnOpenLogin").onclick = function (e) {
+    e.preventDefault();
     document.getElementById("loginModal").style.display = "flex";
 };
 
-// CERRAR CON LA X
+// CERRAR MODAL CON LA X
 document.getElementById("closeLogin").onclick = function () {
     document.getElementById("loginModal").style.display = "none";
 };
 
-// LOGIN SIN BASE DE DATOS
+// LOGIN FALSO (NO USA BASE DE DATOS)
 document.getElementById("btnLogin").onclick = function () {
     let correo = document.getElementById("correo").value.trim();
     let contra = document.getElementById("contra").value.trim();
 
     if (correo === "" || contra === "") {
         alert("Completa los campos.");
-    } else {
-        // Simulación de login correcto sin BD
-        window.location.href = "index.html"; // PÁGINA PRINCIPAL
+        return;
     }
+
+    alert("Inicio de sesión exitoso ✔");
+    window.location.href = "index.html";
 };
-</script>
+
+
 
 
 
