@@ -1688,6 +1688,53 @@ footer {
     border-radius: 100px;
     margin-bottom: 15px;
 }
+.menu-btn {
+    background: #111;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.menu-btn:hover {
+    background: goldenrod;
+}
+
+.menu-container {
+    position: relative;
+}
+
+.menu-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background: #111;
+    border-radius: 10px;
+    padding: 15px;
+    width: 230px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+.menu-dropdown.active {
+    display: block;
+}
+
+.menu-dropdown ul li a {
+    color: white;
+    display: block;
+    padding: 10px 5px;
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+}
+
+.menu-dropdown ul li a:hover {
+    background: #222;
+}
+
 
 
 
