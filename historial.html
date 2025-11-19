@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Historial</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<h1 class="titulo-pagina">🕒 Historial de Navegación</h1>
+
+<div id="lista-historial"></div>
+
+<script>
+    let historial = JSON.parse(localStorage.getItem("historial")) || [];
+    const cont = document.getElementById("lista-historial");
+
+    historial.forEach(h => {
+        cont.innerHTML += `
+            <div class="tarjeta-resena">
+                <p>Visitaste: ${h.nombre}</p>
+                <span>${h.fecha}</span>
+            </div>
+        `;
+    });
+</script>
+
+</body>
+</html>
