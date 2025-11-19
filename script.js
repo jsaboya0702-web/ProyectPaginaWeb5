@@ -331,9 +331,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // LOGIN (simulado)
     btnLogin.addEventListener("click", function () {
-        const correo = document.getElementById("correo").value.trim();
-        const contra = document.getElementById("contra").value.trim();
-
+        let correo = document.getElementById("correo").value.trim();
+        let contra = document.getElementById("contra").value.trim();
+ 
         // Validación correcta:
         if (correo === "" || contra === "") {
             alert("Completa los campos");
@@ -346,6 +346,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
 
 
 
