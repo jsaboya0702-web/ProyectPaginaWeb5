@@ -1735,92 +1735,84 @@ footer {
     background: #222;
 }
 
-/* Fondo del modal */
+/* Fondo oscuro difuminado */
 .modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7);
-  backdrop-filter: blur(6px);
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    backdrop-filter: blur(7px);
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
 }
 
-/* Panel */
+/* Caja principal */
 .modal-content {
-  background: #0d0d0d;
-  padding: 50px 40px;
-  border-radius: 20px;
-  position: relative;
-  width: 450px;
-  text-align: center;
-  box-shadow: 0 0 25px rgba(255, 255, 0, 0.2);
+    background: radial-gradient(circle, #1a1a1a, #0d0d0d);
+    padding: 40px;
+    border-radius: 20px;
+    width: 420px;
+    position: relative;
+    text-align: center;
+    border: 1px solid rgba(255, 217, 0, 0.2);
+    box-shadow: 0 0 40px rgba(255, 217, 0, 0.4);
 }
 
-/* X para cerrar */
+/* X de cerrar */
 .close-btn {
-  position: absolute;
-  top: 12px;
-  right: 15px;
-  color: red;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-  user-select: none;
-}
-.close-btn:hover {
-  color: #ff5555;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-/* Título brillante */
-.glow-title {
-  font-size: 42px;
-  color: #ffeb3b;
-  font-weight: bold;
-  margin-bottom: 35px;
-  text-shadow: 0 0 10px yellow, 0 0 35px yellow, 0 0 60px yellow;
+/* Título LOOKSTORE con brillo */
+.logo-title {
+    font-size: 34px;
+    font-weight: bold;
+    color: #ffd700;
+    text-shadow: 0 0 15px #ffd700, 0 0 30px #ffea73;
+    margin-bottom: 20px;
 }
 
 /* Inputs */
 .modal-content input {
-  width: 100%;
-  margin: 10px 0;
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-  background: #222;
-  color: white;
-  font-size: 16px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    margin: 10px 0;
+    border: none;
+    background: #222;
+    color: white;
+    outline: none;
+    font-size: 15px;
 }
 
-/* Botón */
-#btnLogin {
-  width: 100%;
-  padding: 15px;
-  background: #FFD700;
-  color: black;
-  font-weight: bold;
-  font-size: 18px;
-  border-radius: 8px;
-  margin-top: 15px;
-  cursor: pointer;
-  border: none;
-}
-#btnLogin:hover {
-  background: #ffcc00;
+/* Botón de iniciar sesión */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #ffd700;
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-/* Link registro */
+/* Enlace registrarme */
 .register-link {
-  display: block;
-  margin-top: 20px;
-  color: #ffdb55;
-  text-decoration: none;
-}
-.register-link:hover {
-  text-decoration: underline;
+    display: block;
+    margin-top: 15px;
+    color: #ffd700;
+    text-decoration: none;
+    font-size: 16px;
 }
