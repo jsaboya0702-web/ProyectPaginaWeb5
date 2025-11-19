@@ -324,35 +324,71 @@ document.addEventListener("DOMContentLoaded", function () {
     return links.find(a => /login/i.test(a.textContent)) || null;
   }
 
-document.addEventListener("DOMContentLoaded", function () {
+  const btnOpen = findOpenButton();
+  const modal = document.getElementById(idModal);
+  const btnClose = document.getElementById(idClose);
+  const btnLogin = document.getElementById(idBtnLogin);
+  const inputCorreo = document.getElementById(idCorreo);
+  const inputContra = document.getElementById(idContra);
 
-    // ---- ABRIR MODAL ----
-    document.getElementById("btnOpenLogin").addEventListener("click", function (e) {
-        e.preventDefault();
-        document.getElementById("loginModal").style.display = "flex";
+  // Debug rápido si algo falta
+  if (!modal) {
+    console.error("Modal no encontrado. Asegúrate de tener: <div id=\"" + idModal + "\">...</div>");
+    return;
+  }
+  if (!btnOpen) console.warn("Botón abrir login no encontrado por id. Buscando por texto 'LOGIN' falló.");
+  if (!btnClose) console.warn("Botón cerrar (X) no encontrado (id='" + idClose + "').");
+  if (!btnLogin) console.warn("Botón iniciar sesión no encontrado (id='" + idBtnLogin + "').");
+  if (!inputCorreo || !inputContra) console.warn("Inputs correo/contra no encontrados con ids: '" + idCorreo + "', '" + idContra + "'.");
+
+  // Abrir modal
+  if (btnOpen) {
+    btnOpen.addEventListener("click", function (e) {
+      e.preventDefault();
+      modal.style.display = "flex";
+      // opcional: focus en correo
+      setTimeout(()=>{ if (inputCorreo) inputCorreo.focus(); }, 80);
     });
+  }
 
-    // ---- CERRAR MODAL POR LA X ----
-    document.getElementById("closeLogin").addEventListener("click", function () {
-        document.getElementById("loginModal").style.display = "none";
+  // Cerrar con X
+  if (btnClose) {
+    btnClose.addEventListener("click", function () {
+      modal.style.display = "none";
     });
+  }
 
-    // ---- BOTÓN INICIAR SESIÓN ----
-    document.getElementById("btnLogin").addEventListener("click", function () {
-        let correo = document.getElementById("correo").value.trim();
-        let contra = document.getElementById("contra").value.trim();
+  // Cerrar al hacer click fuera del contenido
+  modal.addEventListener("click", function (ev) {
+    if (ev.target === modal) modal.style.display = "none";
+  });
 
-        if (correo === "" || contra === "") {
-            alert("Completa ambos campos.");
-            return;
-        }
-
-        // Si todo está bien:
-        document.getElementById("loginModal").style.display = "none";
-        window.location.href = "index.html";
+  // Previene que otros scripts intercepten el click (delegación segura)
+  if (btnLogin) {
+    btnLogin.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      const correo = (inputCorreo && inputCorreo.value || "").trim();
+      const contra = (inputContra && inputContra.value || "").trim();
+      if (!correo || !contra) {
+        alert("Por favor completa correo y contraseña.");
+        return;
+      }
+      // Inicio de sesión simulado
+      modal.style.display = "none";
+      // redirigir a la página que quieras (ajusta)
+      window.location.href = "index.html";
     });
+  }
 
+  // Atajo: tecla ESC para cerrar modal
+  document.addEventListener("keydown", function (ev) {
+    if (ev.key === "Escape" && modal.style.display === "flex") {
+      modal.style.display = "none";
+    }
+  });
 });
+
+
 
 
 
