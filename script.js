@@ -374,12 +374,14 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    // Login correcto
+    // Si llena ambos → entra
+    alert("Inicio de sesión exitoso!");
     modal.style.display = "none";
-    window.location.href = "index.html"; // o la página que quieras
+    window.location.href = "index.html"; // página principal
  });
 
 });
+
 
 
 
