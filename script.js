@@ -313,6 +313,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const btnClose = document.getElementById("closeLogin");
     const btnLogin = document.getElementById("btnLogin");
 
+        // ELEMENTOS DEL REGISTRO
+    const modalRegister = document.getElementById("registerModal");
+    const btnCloseRegister = document.getElementById("closeRegister");
+    const btnVolverLogin = document.getElementById("btnVolverLogin");
+    const btnRegistrar = document.getElementById("btnRegistrar")
+
     // ABRIR
     btnOpen.addEventListener("click", function (e) {
         e.preventDefault();
@@ -350,9 +356,42 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.style.display = "none";
     window.location.href = "index.html";
 });
+    btnCloseRegister.addEventListener("click", function () {
+    modalRegister.style.display = "none";
+    });
+
+
+    // ===================================
+    // REGISTRO - VOLVER A LOGIN
+    // ===================================
+    btnVolverLogin.addEventListener("click", function () {
+        modalRegister.style.display = "none";
+        modal.style.display = "flex";
+    });
+
+
+    // ===================================
+    // REGISTRO - VALIDAR FORMULARIO
+    // ===================================
+    btnRegistrar.addEventListener("click", function () {
+        const nombre = document.getElementById("regNombre").value.trim();
+        const correo = document.getElementById("regCorreo").value.trim();
+        const contra = document.getElementById("regContra").value.trim();
+
+        if (nombre === "" || correo === "" || contra === "") {
+            alert("Completa los campos para registrarte");
+            return;
+        }
+
+        alert("Registrado correctamente");
+
+        modalRegister.style.display = "none";
+        modal.style.display = "flex";
+    });
 
 
 });
+
 
 
 
