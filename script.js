@@ -176,12 +176,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     productosHombre.style.display = "grid";
                 });
             }
-            else {
-                asegurarHombresVisibles(() => {
-                    productosMujer.style.display = "grid";
-                    productosHombre.style.display = "grid";
-                });
-            }
+            else if (filtro === "todo") {  // <<--- AQUI VA
+               asegurarHombresVisibles(() => {
+                   productosMujer.style.display = "grid";
+                   productosHombre.style.display = "grid";
+         });
+        }
         });
     });
 });
@@ -448,6 +448,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 });
+
 
 
 
