@@ -334,16 +334,19 @@ document.addEventListener("DOMContentLoaded", function () {
         const correo = document.getElementById("correo").value.trim();
         const contra = document.getElementById("contra").value.trim();
 
-        if (!correo || !contra) {
+        // Validación correcta:
+        if (correo === "" || contra === "") {
             alert("Completa los campos");
             return;
         }
 
+        // Si llenó ambos campos → entrar a la página
         modal.style.display = "none";
         window.location.href = "index.html";
     });
 
 });
+
 
 
 
