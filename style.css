@@ -44,13 +44,13 @@ header::before {
     position: relative;
     z-index: 2;
     font-family: 'Poppins', sans-serif;
-    text-shadow: 0 0 10px rgba(255, 150, 0, 0.8), 0 0 20px rgba(204, 0, 0, 0.8);
+    text-shadow: 0 0 10px rgba(204, 0, 0, 0.8), 0 0 20px rgba(153, 0, 0, 0.6);
     transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
 .logo:hover {
     transform: scale(1.05);
-    text-shadow: 0 0 20px rgba(255, 180, 0, 1), 0 0 40px rgba(255, 100, 0, 0.8);
+    text-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 40px rgba(153, 0, 0, 0.8);
 }
     
 .nav-links {
@@ -87,7 +87,7 @@ header::before {
     bottom: -4px;
     width: 0%;
     height: 2px;
-   background: linear-gradient(90deg, #cc0000, ff0033);
+   background: linear-gradient(90deg, #cc0000, #ff0033);
     transition: width 0.3s ease;
 }
 
@@ -226,7 +226,7 @@ main {
 .productos-info .current-price {
     font-size: 1.1rem;
     font-weight: bold;
-    color: #ff9900;
+    color: #cc0000;
 }
 .productos-info .old-price {
     text-decoration: line-through;
