@@ -348,44 +348,34 @@ document.addEventListener("DOMContentLoaded", function () {
     const btnClose = document.getElementById("closeLogin");
     const btnLogin = document.getElementById("btnLogin");
 
-    // ABRIR
-    btnOpen.addEventListener("click", function (e) {
-        e.preventDefault();
-        modal.style.display = "flex";
-    });
+// ---- ABRIR MODAL ----
+document.getElementById("btnOpenLogin").addEventListener("click", function (e) {
+    e.preventDefault();
+    document.getElementById("loginModal").style.display = "flex";
+});
 
-    // CERRAR CON X
-    btnClose.addEventListener("click", function () {
-        modal.style.display = "none";
-    });
+// ---- CERRAR MODAL POR LA X ----
+document.getElementById("closeLogin").addEventListener("click", function () {
+    document.getElementById("loginModal").style.display = "none";
+});
 
-    // CERRAR HACIENDO CLICK FUERA DEL CUADRO
-    modal.addEventListener("click", function (e) {
-        if (e.target === modal) modal.style.display = "none";
-    });
-
-    btnLogin.addEventListener("click", function () {
-
+// ---- BOTÓN INICIAR SESIÓN ----
+document.getElementById("btnLogin").addEventListener("click", function () {
     let correo = document.getElementById("correo").value.trim();
     let contra = document.getElementById("contra").value.trim();
 
-    // Validación
     if (correo === "" || contra === "") {
-        mostrarMensaje("⚠️ Debe completar ambos campos.");
+        alert("Completa ambos campos.");
         return;
     }
 
-    // Si todo está completo
-    mostrarMensaje("✔️ Datos correctos. Iniciando sesión...");
+    // Si todo está bien:
+    document.getElementById("loginModal").style.display = "none";
+    window.location.href = "index.html";
 });
 
-    // Si llena ambos → entra
-    alert("Inicio de sesión exitoso!");
-    modal.style.display = "none";
-    window.location.href = "index.html"; // página principal
- });
 
-});
+
 
 
 
