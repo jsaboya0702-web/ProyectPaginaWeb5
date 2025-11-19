@@ -1689,22 +1689,5 @@ footer {
     margin-bottom: 15px;
 }
 
-/* Hace que el encabezado quede fijo arriba */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-}
-
-/* Evita que el contenido quede debajo del header */
-body {
-    padding-top: 120px; /* Ajusta según el tamaño de tu encabezado */
-}
-
-/* (Opcional) Desplazamiento suave en toda la página */
-html {
-    scroll-behavior: smooth;
-}
 
 
