@@ -189,7 +189,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
 // Chatbot UI handler — pegar al final de script.js (asegúrate que script.js se incluya 1 sola vez)
 document.addEventListener("DOMContentLoaded", () => {
     const chatbotBtn = document.getElementById("chatbot-btn");
@@ -448,6 +447,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 });
+
 
 
 
