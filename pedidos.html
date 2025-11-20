@@ -2,13 +2,125 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Tus pedidos</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>Tus Pedidos</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #FDEDEC, #FFF8E1);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            background: #C62828;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 0 18px rgba(212,175,55,0.5);
+        }
+
+        .contenedor-pedidos {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .tarjeta-pedido {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            box-shadow: 0 0 12px rgba(0,0,0,0.15);
+            transition: 0.3s;
+        }
+
+        .tarjeta-pedido:hover {
+            transform: scale(1.02);
+        }
+
+        .img-pedido {
+            width: 110px;
+            height: 110px;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 3px solid #C62828;
+        }
+
+        .info-pedido h3 {
+            margin: 0;
+            color: #C62828;
+        }
+
+        .info-pedido p {
+            margin: 5px 0;
+            background: #FBE9E7;
+            padding: 6px 10px;
+            border-radius: 8px;
+            border-left: 4px solid #C62828;
+        }
+
+        .estado {
+            font-weight: bold;
+            color: green;
+        }
+
+        .mensaje-vacio {
+            text-align: center;
+            font-size: 1.2rem;
+            background: #FBE9E7;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 6px solid #C62828;
+            max-width: 500px;
+            margin: 50px auto;
+        }
+
+        .boton-volver {
+            display: block;
+            width: fit-content;
+            margin: 40px auto;
+            padding: 12px 28px;
+            background: #C62828;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            transition: 0.3s;
+            box-shadow: 0 0 12px rgba(212,175,55,0.5);
+        }
+
+        .boton-volver:hover {
+            background: #8B0000;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 35px;
+        }
+    </style>
 </head>
+
 <body>
 
-<h1 class="titulo-pagina">📦 Tus pedidos</h1>
+<header>
+    <h1>📦 Tus Pedidos</h1>
+</header>
+
 <div id="lista-pedidos" class="contenedor-pedidos"></div>
+
+<a href="index.html" class="boton-volver">← Volver al inicio</a>
+
+<footer>
+    <p>&copy; 2025 LookStore | Todos los derechos reservados</p>
+</footer>
 
 <script>
     let pedidos = JSON.parse(localStorage.getItem("pedidos")) || [];
@@ -17,13 +129,18 @@
     if (pedidos.length === 0) {
         contenedor.innerHTML = "<p class='mensaje-vacio'>No tienes pedidos aún.</p>";
     } else {
-        pedidos.forEach(p => {
+        pedidos.forEach((p, index) => {
             contenedor.innerHTML += `
                 <div class="tarjeta-pedido">
                     <img src="${p.imagen}" class="img-pedido">
-                    <h3>${p.nombre}</h3>
-                    <p>Precio: ${p.precio}</p>
-                    <p>Fecha del pedido: ${p.fecha}</p>
+
+                    <div class="info-pedido">
+                        <h3>🛍️ ${p.nombre}</h3>
+                        <p><strong>Precio:</strong> ${p.precio}</p>
+                        <p><strong>Fecha del pedido:</strong> ${p.fecha}</p>
+                        <p><strong>Estado:</strong> <span class="estado">Confirmado</span></p>
+                        <p><strong>N° Orden:</strong> LS-${1000 + index}</p>
+                    </div>
                 </div>
             `;
         });
@@ -32,3 +149,4 @@
 
 </body>
 </html>
+
