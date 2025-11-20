@@ -2,19 +2,126 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Tu perfil</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>Detalles del Perfil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #FDEDEC, #FFF8E1);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            background: #C62828;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 0 18px rgba(212,175,55,0.5);
+        }
+
+        .contenedor {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.15);
+        }
+
+        .foto-perfil {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #C62828;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #C62828;
+            margin-bottom: 10px;
+        }
+
+        .info {
+            margin-top: 20px;
+        }
+
+        .info p {
+            background: #FBE9E7;
+            padding: 12px;
+            border-left: 5px solid #C62828;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+
+        .botones {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .boton {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 8px;
+            background: #C62828;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 0 12px rgba(212,175,55,0.4);
+        }
+
+        .boton:hover {
+            background: #8B0000;
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: 35px;
+            text-align: center;
+            color: #555;
+        }
+    </style>
 </head>
+
 <body>
 
-<h1 class="titulo-pagina">👤 Tu perfil</h1>
+<header>
+    <h1>🎄 Detalles del Perfil</h1>
+</header>
 
-<div class="perfil-container">
-    <img src="../img/default-user.png" class="perfil-foto">
-    <p><strong>Nombre:</strong> Cliente LOOKSTORE</p>
-    <p><strong>Correo:</strong> cliente@lookstore.com</p>
-    <p><strong>Miembro desde:</strong> 2024</p>
+<div class="contenedor">
+
+    <!-- FOTO DE PERFIL -->
+    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" class="foto-perfil">
+
+    <h2>Información del Usuario</h2>
+
+    <div class="info">
+        <p><strong>👤 Nombre:</strong> Jhon Saboya</p>
+        <p><strong>📧 Correo:</strong> jhon@gmail.com</p>
+        <p><strong>📞 Teléfono:</strong> +51 987 687 383</p>
+        <p><strong>📍 Dirección:</strong> Av. República de Panamá 3030, Lima – Perú</p>
+    </div>
+
+    <div class="botones">
+        <a href="#" class="boton">✏️ Editar Información</a>
+        <a href="index.html" class="boton">← Volver al inicio</a>
+    </div>
+
 </div>
+
+<footer>
+    <p>&copy; 2025 LookStore | Todos los derechos reservados</p>
+</footer>
 
 </body>
 </html>
+
