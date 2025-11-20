@@ -844,5 +844,22 @@
    
 <script src="jvscript/script.js"></script>
   </body>
+        
+        <script>
+function agregarPedido(nombre, precio, imagen) {
+    let pedidos = JSON.parse(localStorage.getItem("pedidos")) || [];
+
+    pedidos.push({
+        nombre: nombre,
+        precio: precio,
+        imagen: imagen,
+        fecha: new Date().toLocaleDateString()
+    });
+
+    localStorage.setItem("pedidos", JSON.stringify(pedidos));
+
+    alert("Producto agregado al carrito 🛒");
+}
+</script>
 
 </html>
