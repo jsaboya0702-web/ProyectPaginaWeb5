@@ -2,109 +2,100 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Tus Pedidos</title>
+    <title>📦 Tus Pedidos | LookStore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #FDEDEC, #FFF8E1);
             margin: 0;
-            padding: 20px;
-            color: #333;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url('imagenes/navidad-fondo2.jpg') no-repeat center center fixed;
+            background-size: cover;
         }
 
         header {
             text-align: center;
-            background: #C62828;
-            color: white;
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 25px;
-            box-shadow: 0 0 18px rgba(212,175,55,0.5);
+            padding: 70px 20px 20px;
         }
 
-        .contenedor-pedidos {
-            max-width: 900px;
-            margin: auto;
+        header h1 {
+            font-size: 3rem;
+            color: #D32F2F;
+            text-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+        }
+
+        .contenedor {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px 30px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            margin-bottom: 40px;
         }
 
         .tarjeta-pedido {
-            background: white;
-            padding: 15px;
-            border-radius: 15px;
-            margin-bottom: 20px;
             display: flex;
-            gap: 20px;
             align-items: center;
-            box-shadow: 0 0 12px rgba(0,0,0,0.15);
-            transition: 0.3s;
-        }
-
-        .tarjeta-pedido:hover {
-            transform: scale(1.02);
+            background: rgba(255,255,255,0.1);
+            margin: 15px 0;
+            padding: 15px;
+            border-left: 4px solid #D32F2F;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
         }
 
         .img-pedido {
-            width: 110px;
-            height: 110px;
+            width: 120px;
+            height: 120px;
             border-radius: 10px;
-            object-fit: cover;
-            border: 3px solid #C62828;
+            margin-right: 20px;
+            border: 2px solid #D4AF37;
         }
 
-        .info-pedido h3 {
+        .tarjeta-pedido h3 {
             margin: 0;
-            color: #C62828;
+            color: #FFD54F;
         }
 
-        .info-pedido p {
-            margin: 5px 0;
-            background: #FBE9E7;
-            padding: 6px 10px;
-            border-radius: 8px;
-            border-left: 4px solid #C62828;
-        }
-
-        .estado {
-            font-weight: bold;
-            color: green;
+        .tarjeta-pedido p {
+            margin: 4px 0;
+            color: #f1f1f1;
         }
 
         .mensaje-vacio {
             text-align: center;
-            font-size: 1.2rem;
-            background: #FBE9E7;
-            padding: 20px;
-            border-radius: 12px;
-            border-left: 6px solid #C62828;
-            max-width: 500px;
-            margin: 50px auto;
+            font-size: 1.3rem;
+            padding: 30px;
+            color: #FFD54F;
         }
 
-        .boton-volver {
+        .btn-volver {
             display: block;
-            width: fit-content;
-            margin: 40px auto;
-            padding: 12px 28px;
-            background: #C62828;
+            width: 200px;
+            margin: 30px auto;
+            padding: 12px;
+            text-align: center;
+            background: #D32F2F;
             color: white;
+            border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1rem;
-            border-radius: 30px;
             transition: 0.3s;
-            box-shadow: 0 0 12px rgba(212,175,55,0.5);
         }
 
-        .boton-volver:hover {
-            background: #8B0000;
-            transform: scale(1.05);
+        .btn-volver:hover {
+            background: #B71C1C;
+            box-shadow: 0 0 15px #D4AF37;
         }
 
         footer {
             text-align: center;
-            margin-top: 35px;
+            padding: 20px;
+            color: #ccc;
         }
+
     </style>
 </head>
 
@@ -113,16 +104,14 @@
 <header>
     <h1>📦 Tus Pedidos</h1>
 </header>
-    <button onclick="agregarPedido('Nombre del producto', 'precio', 'ruta_imagen.jpg')">
-    Agregar al carrito
-</button>
 
-<div id="lista-pedidos" class="contenedor-pedidos"></div>
+<section class="contenedor" id="lista-pedidos">
+</section>
 
-<a href="index.html" class="boton-volver">← Volver al inicio</a>
+<a href="index.html" class="btn-volver">← Volver al inicio</a>
 
 <footer>
-    <p>&copy; 2025 LookStore | Todos los derechos reservados</p>
+    © 2025 LookStore | Todos los derechos reservados
 </footer>
 
 <script>
@@ -130,19 +119,16 @@
     const contenedor = document.getElementById("lista-pedidos");
 
     if (pedidos.length === 0) {
-        contenedor.innerHTML = "<p class='mensaje-vacio'>No tienes pedidos aún.</p>";
+        contenedor.innerHTML = "<p class='mensaje-vacio'>No tienes pedidos aún 🎄</p>";
     } else {
-        pedidos.forEach((p, index) => {
+        pedidos.forEach(p => {
             contenedor.innerHTML += `
                 <div class="tarjeta-pedido">
                     <img src="${p.imagen}" class="img-pedido">
-
-                    <div class="info-pedido">
-                        <h3>🛍️ ${p.nombre}</h3>
+                    <div>
+                        <h3>${p.nombre}</h3>
                         <p><strong>Precio:</strong> ${p.precio}</p>
                         <p><strong>Fecha del pedido:</strong> ${p.fecha}</p>
-                        <p><strong>Estado:</strong> <span class="estado">Confirmado</span></p>
-                        <p><strong>N° Orden:</strong> LS-${1000 + index}</p>
                     </div>
                 </div>
             `;
@@ -152,4 +138,3 @@
 
 </body>
 </html>
-
