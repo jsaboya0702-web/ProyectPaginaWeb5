@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cupones y Ofertas | LookStore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6)),
+            url('imagenes/navidad-fondo2.jpg') no-repeat center center fixed;
+            background-size: cover;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 70px 20px 40px;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            color: #C62828;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 15px rgba(198, 40, 40, 0.6);
+        }
+
+        .contenedor {
+            max-width: 1100px;
+            margin: 0 auto 60px;
+            padding: 30px 40px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+            position: relative;
+        }
+
+        .contenedor::before,
+        .contenedor::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 50px;
+            height: 100%;
+            background: rgba(212, 175, 55, 0.3); /* dorado */
+            border-radius: 10px;
+        }
+
+        .contenedor::before { left: -60px; }
+        .contenedor::after { right: -60px; }
+
+        h2 {
+            color: #D4AF37;
+            margin-top: 20px;
+            font-size: 2rem;
+            border-bottom: 2px solid #D4AF37;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .contenedor-ofertas {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .tarjeta-oferta {
+            background: rgba(255,255,255,0.12);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 4px solid #C62828;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+            transition: 0.3s;
+        }
+
+        .tarjeta-oferta:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.35);
+        }
+
+        .tarjeta-oferta h3 {
+            color: #D4AF37;
+            margin-bottom: 10px;
+        }
+
+        .tarjeta-oferta p {
+            margin: 0;
+            color: #eaeaea;
+            font-size: 1.1rem;
+        }
+
+        .tarjeta-oferta span {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #C62828;
+        }
+
+        .btn-copiar {
+            margin-top: 15px;
+            background: #1B5E20;
+            padding: 8px 22px;
+            border-radius: 20px;
+            color: white;
+            cursor: pointer;
+            display: inline-block;
+            transition: 0.3s;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .btn-copiar:hover {
+            background: #C62828;
+            box-shadow: 0 0 12px #D4AF37;
+        }
+
+        .beneficios {
+            margin-top: 50px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid #1B5E20;
+            border-radius: 15px;
+        }
+
+        .beneficios li {
+            margin: 10px 0;
+            color: #eaeaea;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #ccc;
+            background-color: rgba(0,0,0,0.9);
+            border-top: 2px solid #C62828;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🎁 Cupones y Ofertas</h1>
+</header>
+
+<section class="contenedor">
+
+    <h2>Cupones Disponibles</h2>
+
+    <div class="contenedor-ofertas">
+
+        <div class="tarjeta-oferta">
+            <h3>🎄 CUPÓN: NAVIDAD20</h3>
+            <p>20% de descuento en ropa navideña</p>
+            <span>Válido hasta el 25 de diciembre</span>
+            <a class="btn-copiar" onclick="copiar('NAVIDAD20')">Copiar código</a>
+        </div>
+
+        <div class="tarjeta-oferta">
+            <h3>🛍️ CUPÓN: LOOK10</h3>
+            <p>10% de descuento en toda la tienda</p>
+            <span>Solo por hoy</span>
+            <a class="btn-copiar" onclick="copiar('LOOK10')">Copiar código</a>
+        </div>
+
+        <div class="tarjeta-oferta">
+            <h3>🎅 CUPÓN: SANTALOOK30</h3>
+            <p>30% en disfraces navideños premium</p>
+            <span>Stock limitado</span>
+            <a class="btn-copiar" onclick="copiar('SANTALOOK30')">Copiar código</a>
+        </div>
+
+    </div>
+
+    <h2>Ofertas Destacadas</h2>
+
+    <div class="contenedor-ofertas">
+        <div class="tarjeta-oferta">
+            <h3>🎁 2x1 en Gorros Navideños</h3>
+            <p>Compra un gorro y lleva otro GRATIS</p>
+            <span>Solo esta semana</span>
+        </div>
+
+        <div class="tarjeta-oferta">
+            <h3>✨ Luces LED Navideñas</h3>
+            <p>Hasta 40% de descuento</p>
+            <span>Oferta válida hasta agotar stock</span>
+        </div>
+
+        <div class="tarjeta-oferta">
+            <h3>🦌 Suéteres Navideños</h3>
+            <p>25% de descuento en modelos exclusivos</p>
+            <span>Solo preventa</span>
+        </div>
+    </div>
+
+    <h2>Beneficios por Comprar en Navidad</h2>
+
+    <ul class="beneficios">
+        <li>🎄 Envío rápido a todo el país</li>
+        <li>🎁 Emboltorio navideño GRATIS</li>
+        <li>✨ Productos exclusivos solo por temporada</li>
+        <li>💳 Pagos seguros en línea</li>
+    </ul>
+
+</section>
+
+<footer>
+    <p>&copy; 2025 LookStore | Todos los derechos reservados</p>
+</footer>
+
+<script>
+function copiar(cupon) {
+    navigator.clipboard.writeText(cupon);
+    alert("¡Código " + cupon + " copiado!");
+}
+</script>
+
+</body>
+</html>
