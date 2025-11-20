@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cartera y Métodos de Pago | LookStore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6)),
+            url('imagenes/navidad-fondo2.jpg') no-repeat center center fixed;
+            background-size: cover;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 70px 20px 40px;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            color: #C62828;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 15px rgba(198, 40, 40, 0.6);
+        }
+
+        .contenedor {
+            max-width: 1100px;
+            margin: 0 auto 60px;
+            padding: 30px 40px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+            position: relative;
+        }
+
+        .contenedor::before,
+        .contenedor::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 50px;
+            height: 100%;
+            background: rgba(212, 175, 55, 0.3);
+            border-radius: 10px;
+        }
+
+        .contenedor::before { left: -60px; }
+        .contenedor::after { right: -60px; }
+
+        h2 {
+            color: #D4AF37;
+            margin-top: 20px;
+            font-size: 2rem;
+            border-bottom: 2px solid #D4AF37;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .metodos {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .tarjeta {
+            background: rgba(255,255,255,0.12);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 4px solid #C62828;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.35);
+        }
+
+        .tarjeta i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #D4AF37;
+        }
+
+        .tarjeta h3 {
+            color: #D4AF37;
+            margin-bottom: 10px;
+        }
+
+        .tarjeta p {
+            font-size: 1.2rem;
+        }
+
+        .boton-volver {
+            display: inline-block;
+            margin: 40px auto;
+            padding: 12px 30px;
+            background: #C62828;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            transition: 0.3s;
+            box-shadow: 0 0 12px rgba(212,175,55,0.4);
+        }
+
+        .boton-volver:hover {
+            background: #8B0000;
+            box-shadow: 0 0 18px rgba(212,175,55,0.7);
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #ccc;
+            background-color: rgba(0,0,0,0.9);
+            border-top: 2px solid #C62828;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>💳 Cartera y Métodos de Pago</h1>
+</header>
+
+<section class="contenedor">
+
+    <h2>Métodos Disponibles</h2>
+
+    <div class="metodos">
+
+        <!-- YAPE -->
+        <div class="tarjeta">
+            <i class="fa-solid fa-mobile-screen"></i>
+            <h3>Yape</h3>
+            <p><strong>Número:</strong> 987 654 321</p>
+            <p><strong>Titular:</strong> LOOKSTORE S.A.C.</p>
+        </div>
+
+        <!-- PLIN -->
+        <div class="tarjeta">
+            <i class="fa-solid fa-qrcode"></i>
+            <h3>Plin</h3>
+            <p><strong>Número:</strong> 912 345 678</p>
+            <p><strong>Titular:</strong> LOOKSTORE S.A.C.</p>
+        </div>
+
+        <!-- TRANSFERENCIA -->
+        <div class="tarjeta">
+            <i class="fa-solid fa-building-columns"></i>
+            <h3>Transferencia Bancaria</h3>
+            <p><strong>Banco:</strong> BCP</p>
+            <p><strong>Número de cuenta:</strong> 123-45678901-0-12</p>
+            <p><strong>CCI:</strong> 002123456789012345</p>
+        </div>
+
+    </div>
+
+</section>
+
+<center>
+    <a href="index.html" class="boton-volver">← Volver al inicio</a>
+</center>
+
+<footer>
+    <p>&copy; 2025 LookStore | Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
