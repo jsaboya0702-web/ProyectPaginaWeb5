@@ -1940,5 +1940,28 @@ footer {
     top: 20px;
 }
 
+/* Pantallas pequeñas (celulares) */
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .navbar {
+        padding: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 
