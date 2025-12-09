@@ -510,6 +510,11 @@ header {
 .navbar {
     position: relative;
     z-index: 3; /* Asegura que esté sobre la capa oscura */
+    width: 90%;
+    display: flex;
+    justify-content: space-between; /* ✅ Esto separa el logo a la izquierda y el menú a la derecha */
+    align-items: center;
+    color: white;
 }
 
 /* Ajuste para los dropdowns (Filtros y Menú Hamburguesa) */
