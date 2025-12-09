@@ -4,43 +4,36 @@ body {
     padding: 0;
     background-color: #f8f8f8;
     color: #333;
-    /* ✅ AÑADIR/MODIFICAR: Aplicar el fondo a toda la página (body) */
-    background-image: url("imagenes/FONDOofis.jpg"); 
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-position: top center; 
-    background-attachment: fixed; /* Mantiene el fondo fijo al hacer scroll */
-    background-color: #000; /* Color de fallback oscuro *
 }
 
 /* === ENCABEZADO === */
 header {
-    /* ❌ ELIMINAR/COMENTAR la imagen de fondo */
-    /* background-image: url("imagenes/EMCABE.jpg"); */
-    /* background-size: cover; */
-    /* background-position: center; */
-    
-    /* ✅ AÑADIR: Transparencia para que se vea el fondo del body */
-    background-color: transparent; 
-    
+    background-image: url("imagenes/EMCABE.jpg");
+    background-size: cover;
+    background-position: center;
     height: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    z-index: 10;
 }
 
-/* ❌ ELIMINAR completamente este bloque para quitar el overlay oscuro */
-/*
 header::before {
     content: "";
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.35);
 }
-*/
 
+.navbar {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
 .logo {
     font-size: 2.2em;
     font-weight: 900;
@@ -510,11 +503,6 @@ header {
 .navbar {
     position: relative;
     z-index: 3; /* Asegura que esté sobre la capa oscura */
-    width: 90%;
-    display: flex;
-    justify-content: space-between; /* ✅ Esto separa el logo a la izquierda y el menú a la derecha */
-    align-items: center;
-    color: white;
 }
 
 /* Ajuste para los dropdowns (Filtros y Menú Hamburguesa) */
@@ -793,14 +781,12 @@ header, nav, .navbar {
 
 .productos-destacados {
     position: relative;
-    /* ❌ ELIMINAR todas las propiedades de fondo aquí, ya están en body */
-    /* background-image: url("imagenes/FONDOofis.jpg"); */
-    /* background-size: cover; */
-    /* background-repeat: no-repeat; */
-    /* background-position: center; */
-    /* background-attachment: fixed; */
-    
-    padding: 60px 0 400px 0;
+    background-image: url("imagenes/FONDOofis.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 60px 0 400px 0; /* 🔥 Aumenta este número para cubrir los videos */
     z-index: 1;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
@@ -808,6 +794,16 @@ header, nav, .navbar {
     padding-top: 0;
     border-top: none;
 }
+
+
+
+    .productos-destacados::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+    }
 
 /* ✅ MANTENER la capa oscura, pero ajustar la opacidad si lo deseas */
 .productos-destacados::before {
