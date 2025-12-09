@@ -1969,6 +1969,24 @@ header {
 }
 
 
+/* DIFUMINADO ENTRE EL HEADER Y LA SECCIÓN DE PRODUCTOS */
+#productos {
+    position: relative;
+}
+
+#productos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to bottom,
+        rgba(0,0,0,0.35),
+        rgba(0,0,0,0));
+    pointer-events: none;
+    z-index: 10;
+}
 
 
 
