@@ -24,25 +24,6 @@ header {
 
 }
 
-/* DIFUMINAR LA PARTE SUPERIOR DEL FONDO INFERIOR */
-.fondo-inferior::before {
-    content: "";
-    position: absolute;
-    top: -40px;        /* sube el difuminado para tapar la línea */
-    left: 0;
-    width: 100%;
-    height: 60px;      /* altura del difuminado */
-    background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.35),   /* color que se mezcla con el header */
-        rgba(0,0,0,0)       /* desaparece hacia abajo */
-    );
-    pointer-events: none;
-    z-index: 3;
-}
-
-
-
 header::before {
     content: "";
     position: absolute;
@@ -50,6 +31,27 @@ header::before {
     background: rgba(0, 0, 0, 0.35);
 }
 
+/* CONTENEDOR INFERIOR */
+.fondo-inferior {
+    position: relative;
+}
+
+/* DIFUMINADO PARA BORRAR LA LÍNEA */
+.fondo-inferior::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.35),
+        rgba(0,0,0,0)
+    );
+    pointer-events: none;
+    z-index: 3;
+}
 
 .navbar {
     position: relative;
@@ -59,11 +61,6 @@ header::before {
     justify-content: space-between;
     align-items: center;
     color: white;
-}
-
-/* === FONDO INFERIOR (para borrar la línea) === */
-.fondo-inferior {
-    position: relative;
 }
 
 /* === CORRECCIÓN NECESARIA === */
