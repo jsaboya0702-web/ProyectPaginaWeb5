@@ -42,6 +42,10 @@ header::before {
     align-items: center;
     color: white;
 }
+/* === CORRECCIÓN NECESARIA === */
+main {
+    margin-top: 180px; /* igual a la altura del header */
+}
 
 
 .logo {
@@ -193,7 +197,6 @@ header::before {
 
 main {
     padding: 20px 50px;
-    margin-top: 180px; /* 🔥 coincide con la altura del header */
 }
 
 .productos-grid {
