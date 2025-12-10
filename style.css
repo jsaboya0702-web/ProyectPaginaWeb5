@@ -16,7 +16,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    position: fixed;     /* ← LO VOLVEMOS FIJO */
+    top: 0;               /* ← PEGADO ARRIBA */
+    left: 0;
+    width: 100%;          /* ← QUE OCUPE TODO EL ANCHO */
+    z-index: 9999;        /* ← ENCIMA DE TODO */
 }
 
 
@@ -2013,6 +2017,12 @@ header {
     pointer-events: none;
     z-index: 10;
 }
+
+
+body {
+    padding-top: 180px; /* Ajusta según la altura de tu header */
+}
+
 
 
 
