@@ -60,6 +60,12 @@ header::before {
     align-items: center;
     color: white;
 }
+
+/* === FONDO INFERIOR (para borrar la línea) === */
+.fondo-inferior {
+    position: relative;
+}
+
 /* === CORRECCIÓN NECESARIA === */
 main {
     margin-top: 180px; /* igual a la altura del header */
