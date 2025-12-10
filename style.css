@@ -23,21 +23,24 @@ header {
     z-index: 999; /* para que quede encima */
 
 }
-/* Difuminado que tapa la línea entre el header y el contenido */
-header::after {
+
+/* DIFUMINAR LA PARTE SUPERIOR DEL FONDO INFERIOR */
+.fondo-inferior::before {
     content: "";
     position: absolute;
-    bottom: -30px;       /* SE DESPLAZA hacia abajo para tapar la línea */
+    top: -40px;        /* sube el difuminado para tapar la línea */
     left: 0;
     width: 100%;
-    height: 60px;        /* Área total que cubre */
+    height: 60px;      /* altura del difuminado */
     background: linear-gradient(
         to bottom,
-        rgba(0,0,0,0.30), /* empieza arriba (un poco antes de la línea) */
-        rgba(0,0,0,0)     /* se desvanece hacia el contenido */
+        rgba(0,0,0,0.35),   /* color que se mezcla con el header */
+        rgba(0,0,0,0)       /* desaparece hacia abajo */
     );
     pointer-events: none;
+    z-index: 3;
 }
+
 
 
 header::before {
