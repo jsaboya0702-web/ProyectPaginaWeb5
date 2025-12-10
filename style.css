@@ -22,8 +22,6 @@ header {
     width: 100%;
     z-index: 999; /* para que quede encima */
 
-    /* DIFUMINADO ABAJO */
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.35);
 }
 
 
@@ -34,6 +32,25 @@ header::before {
     inset: 0;
     background: rgba(0, 0, 0, 0.35);
 }
+
+
+/* ⭐ AGREGA ESTO AQUÍ ⭐ */
+header::after {
+    content: "";
+    position: absolute;
+    bottom: -25px;   /* qué tanto baja el difuminado */
+    left: 0;
+    width: 100%;
+    height: 50px;    /* altura del difuminado */
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.35),
+        rgba(0, 0, 0, 0)
+    );
+    pointer-events: none;
+    z-index: 5;       /* encima del before pero debajo del contenido */
+}
+/* ⭐ FIN DEL DIFUMINADO ⭐ */
 
 
 .navbar {
