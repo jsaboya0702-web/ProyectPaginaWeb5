@@ -23,28 +23,30 @@ header {
     z-index: 999; /* para que quede encima */
 
 }
-/* 💥 Esta parte tapa la línea de la imagen */
-header::after {
-    content: "";
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    height: 40px;
-    background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.4),
-        rgba(0,0,0,0)
-    );
-    pointer-events: none;
-    z-index: 4;
-}
+
+
 
 header::before {
     content: "";
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.35);
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90px; /* más grande para cubrir la línea de la imagen */
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.55),  /* más fuerte para tapar la línea */
+        rgba(0,0,0,0)
+    );
+    pointer-events: none;
+    z-index: 4;
 }
 
 
