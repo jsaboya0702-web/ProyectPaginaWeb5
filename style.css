@@ -2060,44 +2060,35 @@ header::before {
   pointer-events: none;
 }
 
-/* DIFUMINADO ABAJO (pseudo elemento nuevo) */
+
+/* === ENCABEZADO FIJO CON DIFUMINADO HACIA ABAJO === */
+header {
+    background-image: url("imagenes/EMCABE.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    overflow: hidden;
+}
+
+/* Difuminado hacia abajo (sin línea dura) */
 header::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -40px;      /* cuánto baja el degradado (ajusta si quieres) */
-  height: 80px;       /* altura del difuminado; ajústalo */
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.45) 0%,
-    rgba(0,0,0,0.20) 50%,
-    rgba(0,0,0,0) 100%
-  );
-  pointer-events: none;
-  z-index: 7; /* encima del ::before, pero debajo del .navbar */
-  filter: blur(4px); /* opción visual: suaviza el degradado */
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0));
+    pointer-events: none;
 }
-
-/* Aseguramos que el contenido del header (logo, nav) quede encima */
-header .navbar,
-header .logo,
-header .nav-links,
-header .menu-container {
-  position: relative;
-  z-index: 10; /* más alto que ::after */
-}
-
-/* Evitar que otros contenedores corten el difuminado */
-body, html, main, .productos-destacados {
-  overflow: visible !important;
-}
-
-/* Empujar el contenido para que no quede tapado por header */
-main {
-  margin-top: 180px !important; /* igual a la altura del header */
-}
-
 
 
 
