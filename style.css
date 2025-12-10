@@ -65,26 +65,6 @@ main {
     margin-top: 180px; /* igual a la altura del header */
 }
 
-.fondo-inferior {
-    position: relative;
-    z-index: 1;
-}
-
-.fondo-inferior::before {
-    content: "";
-    position: absolute;
-    top: -70px;     /* sube el difuminado para cubrir la línea */
-    left: 0;
-    width: 100%;
-    height: 90px;   /* grosor del difuminado */
-    background: linear-gradient(
-        to top,
-        rgba(0,0,0,0),
-        rgba(0,0,0,0.55)
-    );
-    pointer-events: none;
-    z-index: 5;
-}
 
 
 
