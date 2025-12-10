@@ -28,7 +28,7 @@ header::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: transparent; /* ya no oscurece nada */
+    background: rgba(0, 0, 0, 0.35);
 }
 
 
